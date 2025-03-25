@@ -1,3 +1,7 @@
+:root {
+	--background-white: #ffffff;
+}
+
 html {
 	scroll-behavior: smooth;
 }
@@ -10,9 +14,9 @@ html {
 
 body {
 	font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-	background-color: #fff;
+	background-color: var(--background-white);
 	color: #333;
-	line-height: 1.6;
+	line-height: 1.5;
 }
 
 a {
@@ -20,21 +24,14 @@ a {
 	color: inherit;
 }
 
-.container {
-	max-width: 960px;
-	margin: 0 auto;
-	padding: 0 1rem;
-}
-
 /* Header & Navigation */
 header {
 	position: fixed;
 	top: 0;
 	width: 100%;
-	background: rgba(255, 255, 255, 0.95);
+	background: rgba(255, 255, 255, 0.8);
 	backdrop-filter: blur(10px);
-	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-	z-index: 100;
+	z-index: 1001;
 }
 
 .header-container {
@@ -67,11 +64,10 @@ nav {
 	top: 100%;
 	left: 0;
 	width: 100%;
-	background: rgba(255, 255, 255, 0.95);
+	background: rgba(255, 255, 255, 0.8);
 	backdrop-filter: blur(10px);
 	flex-direction: column;
 	padding: 1rem;
-	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .nav-links.active {
@@ -81,19 +77,18 @@ nav {
 .nav-links a {
 	padding: 0.75rem;
 	text-align: center;
-	border-radius: 8px;
+	border-radius: 10px;
 	transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 .nav-links a:hover {
-	background-color: rgba(0, 0, 0, 0.04);
-	transform: scale(0.98);
+	background-color: rgba(0, 0, 0, 0.194);
 }
 
 
 /* Hero Section */
 .hero {
-	height: 100vh;
+	height: calc(100vh - 100px);
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -101,7 +96,6 @@ nav {
 	text-align: center;
 	padding: 0 1rem;
 	margin-top: 4rem;
-	/* account for fixed header */
 	max-width: 100%;
 }
 
@@ -120,8 +114,8 @@ nav {
 section {
 	padding: 4rem 1rem;
 	opacity: 0;
-	border-radius: 18px;
 	margin: 2rem 1rem;
+	background-color: #0071e3;
 	/* for GSAP animation */
 	transform: translateY(50px);
 }
@@ -141,29 +135,24 @@ section p {
 
 /* Projects Section */
 
-.projects-container {
-	max-width: 1200px;
-	margin: 0 auto;
-	padding: 0 1rem;
-}
-
 .project-grid {
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-	gap: 2.5rem;
+	grid-template-columns: 1fr;
+	gap: 2rem;
+	width: 100%;
+	max-width: 600px;
+	margin: 0 auto;
 }
 
 .project-card {
-	background-color: #ffffff;
+	background-color: var(--background-white);
 	border-radius: 20px;
 	overflow: hidden;
-	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
 	transition: all 0.4s ease-in-out;
 	border: 1px solid rgba(0, 0, 0, 0.08);
 }
 
 .project-card:hover {
-	box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
 	transform: translateY(-10px);
 }
 
@@ -174,8 +163,6 @@ section p {
 
 .project-image {
 	width: 100%;
-	height: 300px;
-	object-fit: cover;
 	transition: transform 0.5s ease;
 }
 
@@ -234,7 +221,6 @@ section p {
 .contact textarea:focus {
 	border-color: #0071e3;
 	outline: none;
-	box-shadow: 0 0 0 4px rgba(0, 113, 227, 0.15);
 }
 
 .contact button {
@@ -257,13 +243,13 @@ section p {
 footer {
 	text-align: center;
 	padding: 1.5rem 1rem;
-	background: #f9f9f9;
+	background: rgb(245, 245, 247);
 	font-size: 0.875rem;
 	color: #777;
 }
 
 /* Media queries for larger screens */
-@media (min-width: 768px) {
+@media (min-width: 700px) {
 
 	/* Navigation */
 	.hamburger {
@@ -272,12 +258,12 @@ footer {
 
 	.nav-links {
 		display: flex;
+		gap: 1rem;
 		position: static;
 		width: auto;
 		background: transparent;
 		flex-direction: row;
 		padding: 0;
-		box-shadow: none;
 	}
 
 	nav {
@@ -306,7 +292,7 @@ footer {
 		font-size: 1.25rem;
 	}
 
-	section {
+	section:not(.projects) {
 		max-width: 960px;
 		margin: 0 auto;
 		padding: 6rem 1rem;
@@ -320,8 +306,20 @@ footer {
 		font-size: 1rem;
 	}
 
-	.projects .project-grid {
-		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-		gap: 2rem;
+	.projects-title {
+		max-width: 960px;
+		margin: 0 auto;
+		padding: 1rem 1rem;
+	}
+
+	.projects-container {
+		max-width: 100%;
+		margin: 0 auto;
+		padding: 0 1rem;
+	}
+
+	.project-grid {
+		grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+		max-width: 100%;
 	}
 }
