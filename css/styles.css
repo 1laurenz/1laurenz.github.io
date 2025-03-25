@@ -115,7 +115,7 @@ section {
 	padding: 4rem 1rem;
 	opacity: 0;
 	margin: 2rem 1rem;
-	background-color: #0071e3;
+	/* background-color: #0071e3; */
 	/* for GSAP animation */
 	transform: translateY(50px);
 }
