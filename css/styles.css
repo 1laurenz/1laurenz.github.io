@@ -1,380 +1,179 @@
-/* 
-
-	[Self-directed Learning] - CSS Animation 
-
-*/
-
-
-
-.header-content {
-	animation: fadeIn 2s ease-in-out;
-}
-
-@keyframes fadeIn {
-	0% {
-		opacity: 0;
-		transform: translateY(20px);
-	}
-
-	100% {
-		opacity: 1;
-		transform: translateY(0);
-	}
-}
-
-/* 
-
-	[Self-directed Learning] - CSS Animation End
-	
-*/
-
-
-body {
-	font-family: 'Murecho', sans-serif;
-	color: #666;
-	font-size: 18px;
-	line-height: 1.5;
-}
-
-/* 
-
-	WEBSITE TEMPLATE
-
-*/
-/* --- Responsive Sidebar navigation adapted from W3.CSS Templates --- */
-.w3-bar-block {
-	display: flex;
-	justify-content: left;
-	padding-top: 80px;
-	display: none;
-	z-index: 2;
-	width: 20%;
-	min-width: 300px
-}
-
-.w3-bar-item {
-	padding: 8px;
-	width: auto;
-	border: none;
-	display: block;
-	outline: 0;
-	width: 100%;
-	white-space: normal;
-	font-size: 24px;
-	/*  Menu items font size  */
-}
-
-.w3-bar {
-	width: 100%;
-	overflow: hidden
-}
-
-.w3-top,
-.w3-bottom {
-	position: fixed;
-	width: 100%;
-	z-index: 1
-}
-
-.w3-top {
-	top: 0;
-	font-size: 48px;
-	/* Hamburger bars size */
-}
-
-.w3-card {
-	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12)
-}
-
-.w3-sidebar {
-	height: 100%;
-	width: 200px;
+ /* Mobile-first reset and base styles */
+ * {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+  }
+  body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+	  Helvetica, Arial, sans-serif;
 	background-color: #fff;
-	position: fixed !important;
-	z-index: 1;
-	overflow: auto;
-}
-
-.w3-animate-left {
-	position: relative;
-	animation: animateleft 0.4s;
-}
-
-@keyframes animateleft {
-	from {
-		left: -300px;
-		opacity: 0
-	}
-
-	to {
-		left: 0;
-		opacity: 1
-	}
-}
-
-/* The @keyframes CSS at-rule controls the intermediate steps in a CSS animation
-sequence by defining styles for keyframes (or waypoints) along the animation
-sequence. */
-
-.w3-button {
-	border: none;
-	display: inline-block;
-	padding: 8px 16px;
-	vertical-align: middle;
-	overflow: hidden;
+	color: #333;
+	line-height: 1.6;
+  }
+  a {
 	text-decoration: none;
 	color: inherit;
-	background-color: inherit;
-	text-align: center;
-	cursor: pointer;
-	white-space: nowrap
-}
+  }
 
-.w3-button {
-	-webkit-touch-callout: none;
-	-webkit-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	user-select: none
-}
-
-.w3-button:disabled {
-	cursor: not-allowed;
-	opacity: 0.3
-}
-
-/* --- Typographical Scales --- */
-
-/* Viewport is the browser window size. 1vw = 1% of viewport width. */
-header h1 {
-	/* 64px is 3.333%  of 1920px */
-	font-size: 3.333vw;
-}
-
-header h2 {
-	/* 40px is 2.083%  of 1920px */
-	font-size: 2.083vw;
-}
-
-h1,
-h2,
-h3 {
-	font-family: 'Architects Daughter', cursive;
-	color: #427ac1;
-}
-
-h2,
-h3 {
-	line-height: 1;
-	margin: 40px 0;
-}
-
-h2 {
-	font-size: 24px;
-}
-
-h3 {
-	font-size: 20px;
-}
-
-p {
-	margin-bottom: 18px;
-}
-
-/* layout */
-
-nav {
-	background-color: #fff;
-	width: 100%;
-}
-
-.w3-bar-item:link,
-.w3-bar-item:visited {
-	color: #427ac1;
-	text-decoration: none;
-}
-
-.w3-bar-item:hover,
-.w3-bar-item:active {
-	color: #333;
-	text-decoration: underline;
-}
-
-header {
-	margin-top: 80px;
-	/* Space for the nav on page load */
-}
-
-/*  Places the content image in the bg with the headings on top  */
-.header-bg-wrap {
-	overflow: hidden;
-	position: relative;
-}
-
-.header-bg-image {
-	opacity: 0.25;
-	/*The opacity property specifies the opacity/transparency of an element.*/
-	position: absolute;
-	left: 0;
+  /* Mobile Header & Navigation */
+  header {
+	position: fixed;
 	top: 0;
 	width: 100%;
-	height: auto;
-}
+	background: rgba(255, 255, 255, 0.95);
+	backdrop-filter: blur(10px);
+	box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+	z-index: 100;
+  }
+  nav {
+	max-width: 100%;
+	padding: 0.75rem 1rem;
+	display: flex;
+	justify-content: space-around;
+  }
+  nav a {
+	font-weight: 500;
+	font-size: 0.9rem;
+	transition: color 0.3s;
+  }
+  nav a:hover {
+	color: #0071e3;
+  }
 
-.header-content {
-	height: 46.296vh;
-	/* Roughly 500px of 1080px high screen */
-	position: relative;
+  /* Hero Section */
+  #hero {
+	height: 100vh;
 	display: flex;
 	flex-direction: column;
-	align-items: center;
 	justify-content: center;
-}
-
-main,
-.bg-container {
-	width: 71%;
-	margin: 20px auto;
-}
-
-main {
-	padding-top: 20px;
-	overflow: hidden;
-}
-
-.content {
-	margin-left: auto;
-	margin-right: auto;
-	width: 80%;
-}
-
-article img {
-	border: none;
-	-webkit-box-shadow: 3px 3px 7px #777;
-	-moz-box-shadow: 3px 3px 7px #777;
-}
-
-.image-container {
-	width: 70%;
-	margin: 0 auto;
-}
-
-footer {
-	padding: 40px 0;
-	margin-top: 24px;
-	background-color: #a9a9a9;
-}
-
-footer ol {
-	font-size: 20px;
-	text-align: center;
-	list-style-type: none;
-	display: flex;
 	align-items: center;
-	justify-content: space-between;
-	padding: 0;
-}
+	text-align: center;
+	padding: 0 1rem;
+	margin-top: 4rem; /* account for fixed header */
+  }
+  #hero h1 {
+	font-size: 2.5rem;
+	margin-bottom: 0.75rem;
+	letter-spacing: -0.5px;
+  }
+  #hero p {
+	font-size: 1.125rem;
+	color: #555;
+  }
 
-footer ol li {
-	margin: 10px;
-	display: block;
-	/*Makes the li selectable up the to the edge of the margins*/
-}
+  /* Section styling */
+  section {
+	padding: 4rem 1rem;
+	opacity: 0; /* for GSAP animation */
+	transform: translateY(50px);
+  }
+  section h2 {
+	font-size: 1.75rem;
+	margin-bottom: 0.75rem;
+	border-bottom: 2px solid #eee;
+	padding-bottom: 0.5rem;
+  }
+  section p {
+	font-size: 0.95rem;
+	color: #555;
+	margin-bottom: 1.25rem;
+  }
 
-footer a:link,
-a:visited {
+  /* Projects Section */
+  #projects .project-grid {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 1.5rem;
+  }
+  .project-card {
+	border: 1px solid #eee;
+	padding: 1rem;
+	transition: transform 0.3s;
+  }
+  .project-card:hover {
+	transform: translateY(-5px);
+  }
+  .project-card img {
+	width: 100%;
+	height: auto;
+	margin-bottom: 0.5rem;
+  }
+  .project-card h3 {
+	font-size: 1.125rem;
+	margin-bottom: 0.5rem;
+  }
+
+  /* Contact Section */
+  #contact form {
+	display: flex;
+	flex-direction: column;
+	gap: 0.75rem;
+  }
+  #contact input,
+  #contact textarea {
+	padding: 0.75rem;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+	font-size: 1rem;
+	transition: border-color 0.3s;
+  }
+  #contact input:focus,
+  #contact textarea:focus {
+	border-color: #0071e3;
+	outline: none;
+  }
+  #contact button {
+	padding: 0.75rem;
+	border: none;
+	background-color: #0071e3;
 	color: #fff;
-	text-decoration: none;
-}
+	font-size: 1rem;
+	border-radius: 4px;
+	cursor: pointer;
+	transition: background-color 0.3s;
+  }
+  #contact button:hover {
+	background-color: #005bb5;
+  }
 
-footer a:hover,
-a:active {
-	color: #f8f2f2;
-	text-decoration: underline;
-}
+  /* Footer */
+  footer {
+	text-align: center;
+	padding: 1.5rem 1rem;
+	background: #f9f9f9;
+	font-size: 0.875rem;
+	color: #777;
+  }
 
-/* -- Code for the Cookie Compliance popover window -- */
-/*
-#cookiePopup {
-  background-color: #ffffff;
-  position: absolute;
-  left: 5%;
-  bottom: 0;
-  font-size: 14px;
-  width: 90%;
-  box-shadow: 0 0 2em rgba(5, 0, 31, 0.15);
-  font-family: "Poppins", sans-serif;
-  text-align: justify;
-  line-height: 1.8em;
-  margin: 0 auto;
-  padding: 2em 1.4em;
-  border-radius: 6px;
-  transition: all 0.5s ease-in-out;
-}
+  /* Smooth scroll */
+  html {
+	scroll-behavior: smooth;
+  }
 
-#cookiePopup p {
-  text-align: center;
-  margin: 1.4em 0;
-}
-#cookiePopup button {
-  background-color: #6859fe;
-  border: none;
-  color: #ffffff;
-  font-size: 1.2em;
-  padding: 1em 1.4em;
-  display: block;
-  position: relative;
-  margin: auto;
-  border-radius: 5px;
-}
-#cookiePopup a {
-  color: #6859fe;
-}
-
-.hide {
-  visibility: hidden;
-  
-}
-.show {
-  visibility: visible;
- 
-}
-*/
-/* -- End of Code for the Cookie Compliance popover window -- */
-
-@media only screen and (min-width:900px) {
-
+  /* Media queries for larger screens */
+  @media (min-width: 768px) {
 	nav {
-		width: 40%;
+	  max-width: 960px;
+	  margin: 0 auto;
 	}
-
-	h2 {
-		font-size: 48px;
+	#hero h1 {
+	  font-size: 3rem;
 	}
-
-	h3 {
-		font-size: 36px;
+	#hero p {
+	  font-size: 1.25rem;
 	}
-
-	.outer-container {
-		display: flex;
-		flex-direction: row;
-		justify-content: space-between;
+	section {
+	  padding: 6rem 2rem;
 	}
-
-	.inner-container {
-		width: 48%;
+	section h2 {
+	  font-size: 2rem;
 	}
-
-	.w3-bar-item {
-		font-size: 36px;
+	section p {
+	  font-size: 1rem;
 	}
-
-}
-
-@media only screen and (min-width:1340px) {
-
-	.hamburger-position {
-		margin-left: 10%;
+	#projects .project-grid {
+	  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	  gap: 2rem;
 	}
-}
+  }
