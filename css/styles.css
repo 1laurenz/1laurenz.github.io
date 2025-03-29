@@ -1,5 +1,25 @@
 :root {
-	--background-white: #ffffff;
+	--background-color: #ffffff;
+	--text-color: #333;
+	--header-bg: rgba(255, 255, 255, 0.8);
+	--nav-link-hover: rgba(0, 0, 0, 0.194);
+	--border: 1px solid rgba(0, 0, 0, 0.08);
+	--section-border: 2px solid rgba(0, 0, 0, 0.08);
+	--body-color: #555;
+	--language-bg: #f5f5f7;
+	--language-text: #1d1d1f;
+}
+
+:root.dark-mode {
+	--background-color: #121212;
+	--text-color: #ddd;
+	--header-bg: rgba(18, 18, 18, 0.8);
+	--nav-link-hover: rgba(255, 255, 255, 0.1);
+	--border: 1px solid rgba(255, 255, 255, 0.08);
+	--section-border: 2px solid rgba(255, 255, 255, 0.08);
+	--body-color: #aaaaaa;
+	--language-bg: #1d1d1f;
+	--language-text: #f5f5f7;
 }
 
 html {
@@ -14,8 +34,8 @@ html {
 
 body {
 	font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-	background-color: var(--background-white);
-	color: #333;
+	background-color: var(--background-color);
+	color: var(--text-color);
 	line-height: 1.5;
 }
 
@@ -29,7 +49,7 @@ header {
 	position: fixed;
 	top: 0;
 	width: 100%;
-	background: rgba(255, 255, 255, 0.8);
+	background: var(--header-bg);
 	backdrop-filter: blur(10px);
 	z-index: 1001;
 }
@@ -55,7 +75,7 @@ nav {
 	font-size: 1.5rem;
 	cursor: pointer;
 	display: block;
-	color: #333;
+	color: var(--text-color);
 }
 
 .nav-links {
@@ -64,7 +84,7 @@ nav {
 	top: 100%;
 	left: 0;
 	width: 100%;
-	background: rgba(255, 255, 255, 0.8);
+	background: var(--header-bg);;
 	backdrop-filter: blur(10px);
 	flex-direction: column;
 	padding: 1rem;
@@ -82,9 +102,59 @@ nav {
 }
 
 .nav-links a:hover {
-	background-color: rgba(0, 0, 0, 0.194);
+	background-color: var(--nav-link-hover);
 }
 
+/* Dark Mode */
+.toggle-switch {
+	position: relative;
+	display: inline-block;
+	width: 50px;
+	height: 28px;
+	margin-left: 1rem;
+}
+
+/* Hide default checkbox */
+.toggle-switch input {
+	opacity: 0;
+	width: 0;
+	height: 0;
+}
+
+/* The slider */
+.toggle-switch label {
+	position: absolute;
+	cursor: pointer;
+	background-color: #f9e79f;
+	border-radius: 28px;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	transition: background-color 0.3s;
+}
+
+/* The circle inside the slider */
+.toggle-switch label::before {
+	content: "";
+	position: absolute;
+	height: 22px;
+	width: 22px;
+	left: 3px;
+	bottom: 3px;
+	background-color: white;
+	border-radius: 50%;
+	transition: transform 0.3s;
+}
+
+/* When checked (dark mode), change background color and move the circle */
+.toggle-switch input:checked+label {
+	background-color: #333;
+}
+
+.toggle-switch input:checked+label::before {
+	transform: translateX(22px);
+}
 
 /* Hero Section */
 .hero {
@@ -107,7 +177,7 @@ nav {
 
 .hero p {
 	font-size: 1.125rem;
-	color: #555;
+	color: var(--body-color);
 }
 
 /* Section styling */
@@ -123,13 +193,13 @@ section {
 section h2 {
 	font-size: 1.75rem;
 	margin-bottom: 0.75rem;
-	border-bottom: 2px solid #eee;
+	border-bottom: var(--section-border);
 	padding-bottom: 0.5rem;
 }
 
 section p {
 	font-size: 0.95rem;
-	color: #555;
+	color: var(--body-color);
 	margin-bottom: 1.25rem;
 }
 
@@ -149,7 +219,7 @@ section p {
 	border-radius: 20px;
 	overflow: hidden;
 	transition: all 0.4s ease-in-out;
-	border: 1px solid rgba(0, 0, 0, 0.08);
+	border: var(--border);
 }
 
 .project-card:hover {
@@ -182,7 +252,7 @@ section p {
 }
 
 .project-description {
-	color: #515154;
+	color: var(--body-color);
 	margin-bottom: 1rem;
 }
 
@@ -193,8 +263,8 @@ section p {
 }
 
 .language {
-	background-color: #f5f5f7;
-	color: #1d1d1f;
+	background-color: var(--language-bg);
+	color: var(--language-text);
 	padding: 0.25rem 0.75rem;
 	border-radius: 20px;
 	font-size: 0.8rem;
@@ -211,7 +281,9 @@ section p {
 .contact input,
 .contact textarea {
 	padding: 0.75rem;
-	border: 1px solid #ddd;
+	border: var(--border);
+	background-color: var(--background-color);
+	color: var(--body-color);
 	font-size: 1rem;
 	border-radius: 12px;
 	transition: all 0.3s ease;
@@ -230,7 +302,7 @@ section p {
 	color: #fff;
 	font-size: 1rem;
 	cursor: pointer;
-	border-radius: 12px;
+	border-radius: 30px;
 	transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
@@ -243,9 +315,9 @@ section p {
 footer {
 	text-align: center;
 	padding: 1.5rem 1rem;
-	background: rgb(245, 245, 247);
 	font-size: 0.875rem;
-	color: #777;
+	background: var(--language-bg);
+	color: var(--language-text);
 }
 
 /* Media queries for larger screens */

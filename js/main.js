@@ -1,18 +1,23 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Mobile menu toggle
-    const hamburger = document.querySelector('.hamburger');
-    const navLinks = document.querySelector('.nav-links');
-  
-    hamburger.addEventListener('click', () => {
-      navLinks.classList.toggle('active');
+  // Mobile menu toggle
+  const hamburger = document.querySelector('.hamburger');
+  const navLinks = document.querySelector('.nav-links');
+
+  hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+  });
+
+  // Close menu when clicking links
+  document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+      navLinks.classList.remove('active');
     });
-  
-    // Close menu when clicking links
-    document.querySelectorAll('.nav-links a').forEach(link => {
-      link.addEventListener('click', () => {
-        navLinks.classList.remove('active');
-      });
-    });
+  });
+
+  // Dark mode toggle with the switch
+  const darkModeToggle = document.getElementById('dark-mode-toggle');
+  darkModeToggle.addEventListener('change', () => {
+    document.documentElement.classList.toggle('dark-mode', darkModeToggle.checked);
   });
   
   // GSAP Scroll Animation
@@ -34,4 +39,4 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     );
   });
-  
+});
