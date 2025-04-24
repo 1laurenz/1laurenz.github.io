@@ -44,6 +44,10 @@ a {
 	color: inherit;
 }
 
+ul {
+	padding-left: 3rem;
+}
+
 /* Header & Navigation */
 header {
 	position: fixed;
@@ -84,7 +88,7 @@ nav {
 	top: 100%;
 	left: 0;
 	width: 100%;
-	background: var(--header-bg);;
+	background: var(--header-bg);
 	backdrop-filter: blur(10px);
 	flex-direction: column;
 	padding: 1rem;
@@ -364,7 +368,13 @@ footer {
 		font-size: 1.25rem;
 	}
 
-	section:not(.projects) {
+	/* section:not(.projects) {
+		max-width: 960px;
+		margin: 0 auto;
+		padding: 6rem 1rem;
+	} */
+
+	section {
 		max-width: 960px;
 		margin: 0 auto;
 		padding: 6rem 1rem;
@@ -384,14 +394,131 @@ footer {
 		padding: 1rem 1rem;
 	}
 
-	.projects-container {
+	/* .projects-container {
 		max-width: 100%;
 		margin: 0 auto;
 		padding: 0 1rem;
-	}
+	} */
 
 	.project-grid {
 		grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-		max-width: 100%;
+		max-width: 2560px;
+	}
+}
+
+/* 
+
+CSS Carousel
+
+I tried it on chrome and it crashes sometimes
+
+buttons and markers only work on chrome and edge
+
+https://www.youtube.com/watch?v=jSCgZqoebsM
+
+https://chrome.dev/carousel/horizontal/cards/
+https://developer.chrome.com/blog/carousels-with-css
+
+https://developer.mozilla.org/en-US/docs/Web/CSS/::scroll-button
+https://developer.mozilla.org/en-US/docs/Web/CSS/::scroll-marker
+https://developer.mozilla.org/en-US/docs/Web/CSS/::scroll-marker-group
+
+*/
+
+.projects-container {
+	max-width: 100%;
+	position: relative;
+	padding: 0 2rem;
+	margin: 2rem auto;
+}
+
+.project-carousel {
+	display: flex;
+	gap: 2rem;
+	overflow-x: auto;
+	scroll-snap-type: x mandatory;
+	scroll-behavior: smooth;
+	-webkit-overflow-scrolling: touch;
+	padding-bottom: 1rem;
+	scrollbar-width: none;
+}
+
+.project-carousel::-webkit-scrollbar {
+	display: none;
+}
+
+.project-card {
+	scroll-snap-align: center;
+	flex: 0 0 calc(100% - 2rem);
+	min-width: calc(100% - 2rem);
+	margin: 0 1rem;
+	transition: transform 0.3s ease;
+}
+
+/* Scroll buttons */
+.project-carousel::scroll-button(left) {
+	content: "<" / "Scroll Left";
+	position: absolute;
+	top: 50%;
+	left: 1rem;
+}
+
+.project-carousel::scroll-button(right) {
+	content: ">" / "Scroll Right";
+	position: absolute;
+	top: 50%;
+	right: 1rem;
+}
+
+.project-carousel::scroll-button(*) {
+	opacity: 0.75;
+	cursor: pointer;
+	transform: translateY(-50%);
+	color: var(--language-text);
+	background-color: var(--language-bg);
+	border: var(--border);
+	border-radius: 50%;
+	padding: 1rem;
+	width: 40px;
+	height: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: all 0.2s ease;
+}
+
+.project-carousel::scroll-button(*):hover {
+	opacity: 1;
+	transform: translateY(-50%) scale(1.1);
+}
+
+/* Scroll markers*/
+.project-carousel {
+	scroll-marker-group: after;
+}
+
+.project-carousel::scroll-marker-group {
+	display: flex;
+	justify-content: center;
+	gap: 0.5rem;
+	width: 100%;
+	margin-top: 1rem;
+}
+
+.project-card::scroll-marker {
+	content: '●' / "Go to project";
+	margin: 0 0.25rem;
+	color: var(--language-bg);
+	text-decoration: none;
+}
+
+.project-card::scroll-marker:target-current {
+	color: var(--language-text);
+}
+
+@media (min-width: 700px) {
+	.project-card {
+		flex: 0 0 calc(33.33% - 2rem);
+		min-width: calc(33.33% - 2rem);
 	}
 }
