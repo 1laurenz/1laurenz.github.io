@@ -428,7 +428,6 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/::scroll-marker-group
 .projects-container {
 	max-width: 100%;
 	position: relative;
-	padding: 0 2rem;
 	margin: 2rem auto;
 }
 
@@ -449,9 +448,8 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/::scroll-marker-group
 
 .project-card {
 	scroll-snap-align: center;
-	flex: 0 0 calc(100% - 2rem);
+	flex: 0 0 calc(100%);
 	min-width: calc(100% - 2rem);
-	margin: 0 1rem;
 	transition: transform 0.3s ease;
 }
 
