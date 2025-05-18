@@ -238,6 +238,7 @@ section p {
 .project-image {
 	width: 100%;
 	transition: transform 0.5s ease;
+	border-bottom: var(--border);
 }
 
 .project-card:hover .project-image {
