@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Laurenz Sinchongco | Home</title>
+
+	<link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/about.css">
+
+	<script src="js/main.js" defer></script>
+
+	<!-- GSAP and ScrollTrigger for scroll animations -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.1/gsap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.1/ScrollTrigger.min.js"></script>
+</head>
+
+<body>
+	<!-- Header -->
+	<header>
+		<nav>
+			<button class="hamburger">☰</button>
+			<div class="nav-links">
+				<a href="index.html" class="nav-link">Home</a>
+				<a href="about.html" class="nav-link">About</a>
+				<a href="projects.html" class="nav-link">Projects</a>
+				<!-- <a href="#contact" class="nav-link">Contact</a> -->
+			</div>
+
+			<!-- Dark Mode -->
+			<div class="toggle-switch">
+				<input type="checkbox" id="dark-mode-toggle" />
+				<label for="dark-mode-toggle"></label>
+			</div>
+		</nav>
+	</header>
+
+	<!-- Hero -->
+	<section class="hero" id="hero">
+		<h1>Laurenz Sinchongco</h1>
+		<p>Hi I'm using this site to play around, apologies for crashes!</p>
+	</section>
+
+	<!-- About -->
+	<section class="about" id="about">
+		<h2>About Me</h2>
+		<p>A student who enjoys web design and development. I'm currently using this website to play around with the
+			following:</p>
+		<ul>
+			<li>GSAP animation with the fade in scroll</li>
+			<li>Dark mode and inverting the colours</li>
+			<li>CSS-only carousel on my portfolio (if you don't see the next or previous buttons, try hovering over the
+				cards and use 'shift + mouse scroll' to go left and right)</li>
+		</ul>
+	</section>
+
+	<!-- Contact -->
+	<section class="contact" id="contact">
+		<h2>Contact</h2>
+		<form action="#" method="post">
+			<input type="text" name="name" placeholder="Your Name" required />
+			<input type="email" name="email" placeholder="Your Email" required />
+			<textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+			<button type="submit">Send Message</button>
+		</form>
+	</section>
+
+	<!-- Footer -->
+	<footer>
+		<p>&copy; 2025 Laurenz Sinchongco. All rights reserved.</p>
+	</footer>
+</body>
+
+</html>
