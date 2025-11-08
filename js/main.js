@@ -5,14 +5,26 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (hamburger && navLinks) {
     hamburger.addEventListener('click', () => {
-      navLinks.classList.toggle('active');
+      const isOpen = navLinks.classList.toggle('active');
+      hamburger.setAttribute('aria-expanded', String(isOpen));
     });
 
     document.querySelectorAll('.nav-links a').forEach(link => {
       link.addEventListener('click', () => {
         navLinks.classList.remove('active');
+        hamburger.setAttribute('aria-expanded', 'false');
       });
     });
+
+    // Close menu on resize to desktop to avoid stale state
+    const mq = window.matchMedia('(min-width: 700px)');
+    const syncMenuState = () => {
+      if (mq.matches) {
+        navLinks.classList.remove('active');
+        hamburger.setAttribute('aria-expanded', 'false');
+      }
+    };
+    mq.addEventListener ? mq.addEventListener('change', syncMenuState) : mq.addListener(syncMenuState);
   }
 
   if (darkModeToggle) {

@@ -18,23 +18,36 @@
 
 <body>
 	<!-- Header -->
-	<header>
-		<nav>
-			<button class="hamburger">☰</button>
-			<div class="nav-links">
-				<a href="index.html" class="nav-link">Home</a>
-				<a href="about.html" class="nav-link">About</a>
-				<a href="projects.html" class="nav-link">Projects</a>
-				<!-- <a href="#contact" class="nav-link">Contact</a> -->
-			</div>
+<header>
+  <nav>
+    <a href="index.html" class="logo-link">
+      <img class="nav-logo" src="img/logo.svg" alt="Site logo" />
+    </a>
 
-			<!-- Dark Mode -->
-			<div class="toggle-switch">
-				<input type="checkbox" id="dark-mode-toggle" />
-				<label for="dark-mode-toggle"></label>
-			</div>
-		</nav>
-	</header>
+    <!-- Right-aligned actions: dark mode + hamburger -->
+    <div class="nav-actions">
+      <div class="toggle-switch">
+        <input type="checkbox" id="dark-mode-toggle" />
+        <label for="dark-mode-toggle"></label>
+      </div>
+
+      <button
+        class="hamburger"
+        aria-label="Open navigation menu"
+        aria-expanded="false"
+        aria-controls="primary-navigation"
+      >
+        ☰
+      </button>
+    </div>
+
+    <div id="primary-navigation" class="nav-links" role="navigation">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="about.html" class="nav-link">About</a>
+      <a href="projects.html" class="nav-link">Projects</a>
+    </div>
+  </nav>
+</header>
 
 	<!-- Hero -->
 	<section class="hero" id="hero">
@@ -43,28 +56,126 @@
 	</section>
 
 	<!-- About -->
-	<section class="about" id="about">
-		<h2>About Me</h2>
-		<p>A student who enjoys web design and development. I'm currently using this website to play around with the
-			following:</p>
-		<ul>
-			<li>GSAP animation with the fade in scroll</li>
-			<li>Dark mode and inverting the colours</li>
-			<li>CSS-only carousel on my portfolio (if you don't see the next or previous buttons, try hovering over the
-				cards and use 'shift + mouse scroll' to go left and right)</li>
-		</ul>
-	</section>
+<section class="about" id="about">
+	<h2>About Me</h2>
+
+	<p>
+		I am <strong>Laurenz Sinchongco</strong>, a front end web developer focused on creating clean, accessible, and user friendly e-commerce experiences. I enjoy turning brand goals into clear, intuitive interfaces that feel familiar, consistent, and smooth across devices. I work well in team settings and stay steady under tight weekly publishing cycles.
+	</p>
+
+	<p>
+		My approach is shaped by both design instinct and real retail context. I have hands-on experience building promotional pages, partnering with designers and business stakeholders, and improving UI performance. I value clear communication, attention to detail, and aligning digital brands with the feeling they want customers to experience.
+	</p>
+
+	<h3>What I Bring</h3>
+	<ul>
+		<li>Strong foundation in HTML, CSS, JavaScript, WordPress, and WooCommerce</li>
+		<li>Experience developing promotional modules and reusable content systems</li>
+		<li>Clean UI execution supported by accessibility and responsive design principles</li>
+		<li>Collaboration mindset, clear documentation, and on-schedule delivery</li>
+	</ul>
+
+	<h3>Career Objective</h3>
+	<p>
+		I aim to specialize in front end e-commerce development, where thoughtful layout, brand storytelling, and user behavior intersect. I want to help teams build online retail spaces that feel welcoming, efficient, and trustworthy.
+	</p>
+
+	<h3>Selected Projects</h3>
+	<ul>
+		<li>
+			<strong>Patricia Street Deli Merch Store</strong> (WordPress, WooCommerce, PHP)<br>
+			Built product templates and a promotions system that allowed owners to publish weekly sales in under ten minutes. Coordinated with owners and delivered MVP in four weeks.
+		</li>
+		<li>
+			<strong>Personal Portfolio Website</strong> (HTML, CSS, JavaScript, GSAP)<br>
+			Designed and developed a responsive multi-section portfolio with dark mode and motion effects. Optimized 40+ asset images and structured all pages semantically.
+		</li>
+	</ul>
+
+	<h3>Beyond Development</h3>
+	<p>
+		I stay involved in community leadership, youth outreach, and live event production where I coordinate volunteers and manage weekly media and AV setups. These roles strengthened my communication, adaptability, and collaborative decision making.
+	</p>
+</section>
+
 
 	<!-- Contact -->
-	<section class="contact" id="contact">
-		<h2>Contact</h2>
-		<form action="#" method="post">
-			<input type="text" name="name" placeholder="Your Name" required />
-			<input type="email" name="email" placeholder="Your Email" required />
-			<textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-			<button type="submit">Send Message</button>
-		</form>
-	</section>
+	<section class="contact" id="contact" aria-labelledby="contact-title">
+  <h2 id="contact-title">Contact</h2>
+  <p>Let's connect! Email, call, or message to start your next project.</p>
+
+  <div class="contact__layout">
+    <!-- Contact info (mobile: above form, desktop: right of form) -->
+    <div class="contact__panel contact__panel--info">
+      <ul class="contact__list" role="list">
+        <li class="contact__item">
+          <a class="contact__link" href="mailto:laurenzsinchongco@gmail.com">
+            <!-- Heroicons: Envelope -->
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21.75 7.5v9a2.25 2.25 0 0 1-2.25 2.25H4.5A2.25 2.25 0 0 1 2.25 16.5v-9" />
+              <path d="M2.25 7.5 12 13.5l9.75-6" />
+            </svg>
+            <span class="contact__text">laurenzsinchongco@gmail.com</span>
+          </a>
+        </li>
+
+        <li class="contact__item">
+          <a class="contact__link" href="tel:+17806687739">
+            <!-- Heroicons: Phone -->
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M2.25 6.75c0 8.284 6.716 15 15 15 .87 0 1.715-.07 2.532-.205a1.5 1.5 0 0 0 1.254-1.48v-2.49a1.5 1.5 0 0 0-1.026-1.423l-3.143-1.048a1.5 1.5 0 0 0-1.6.45l-.968 1.16a12.03 12.03 0 0 1-5.86-5.86l1.16-.968a1.5 1.5 0 0 0 .45-1.6L8.848 3.49A1.5 1.5 0 0 0 7.425 2.25H4.935a1.5 1.5 0 0 0-1.48 1.254A16.96 16.96 0 0 0 2.25 6.75Z" />
+            </svg>
+            <span class="contact__text">+1 (780) 668-7739</span>
+          </a>
+        </li>
+
+        <li class="contact__item">
+          <a class="contact__link" href="https://www.linkedin.com/in/your-handle" rel="me external noopener" target="_blank" aria-label="LinkedIn (opens in new tab)">
+            <!-- Heroicons: Arrow Top Right On Square -->
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4.5 9.75v7.5A2.25 2.25 0 0 0 6.75 19.5h7.5" />
+              <path d="M9.75 4.5h7.5A1.5 1.5 0 0 1 18.75 6v7.5" />
+              <path d="M8.25 15.75 19.5 4.5" />
+            </svg>
+            <span class="contact__text">LinkedIn</span>
+          </a>
+        </li>
+
+        <li class="contact__item">
+          <a class="contact__link" href="https://github.com/your-handle" rel="me external noopener" target="_blank" aria-label="GitHub (opens in new tab)">
+            <!-- Heroicons: Arrow Top Right On Square -->
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4.5 9.75v7.5A2.25 2.25 0 0 0 6.75 19.5h7.5" />
+              <path d="M9.75 4.5h7.5A1.5 1.5 0 0 1 18.75 6v7.5" />
+              <path d="M8.25 15.75 19.5 4.5" />
+            </svg>
+            <span class="contact__text">GitHub</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Contact form -->
+    <form class="contact__panel contact__panel--form contact__form" action="#" method="post" novalidate>
+      <label class="sr-only" for="contact-name">Your Name</label>
+      <input id="contact-name" type="text" name="name" placeholder="Your Name" autocomplete="name" required />
+
+      <label class="sr-only" for="contact-email">Your Email</label>
+      <input id="contact-email" type="email" name="email" placeholder="Your Email" autocomplete="email" inputmode="email" required />
+
+      <label class="sr-only" for="contact-message">Your Message</label>
+      <textarea id="contact-message" name="message" rows="5" placeholder="Your Message" required></textarea>
+
+      <button type="submit" class="contact__submit">
+        <!-- Heroicons: Paper Airplane -->
+        <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="m3 3.75 17.25 8.25L3 20.25l3.04-7.72 8.21.72-8.21-.72L3 3.75Z" />
+        </svg>
+        <span>Send Message</span>
+      </button>
+    </form>
+  </div>
+</section>
 
 	<!-- Footer -->
 	<footer>

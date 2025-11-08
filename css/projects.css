@@ -1,0 +1,270 @@
+/* Projects Section */
+
+.project-grid {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 2rem;
+	width: 100%;
+	max-width: 600px;
+	margin: 0 auto;
+}
+
+.project-card {
+	background-color: var(--background-white);
+	border-radius: 20px;
+	overflow: hidden;
+	transition: all 0.4s ease-in-out;
+	border: var(--border);
+}
+
+.project-card:hover {
+	transform: translateY(-10px);
+}
+
+.project-image-wrapper {
+	position: relative;
+	overflow: hidden;
+}
+
+.project-image {
+	width: 100%;
+	transition: transform 0.5s ease;
+	border-bottom: var(--border);
+}
+
+.project-card:hover .project-image {
+	transform: scale(1.05);
+}
+
+.project-content {
+	padding: 1.5rem;
+}
+
+.project-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 1rem;
+}
+
+.project-description {
+	color: var(--body-color);
+	margin-bottom: 1rem;
+}
+
+.project-languages {
+	display: flex;
+	gap: 0.75rem;
+	margin-bottom: 1.5rem;
+}
+
+.language {
+	background-color: var(--language-bg);
+	color: var(--language-text);
+	padding: 0.25rem 0.75rem;
+	border-radius: 20px;
+	font-size: 0.8rem;
+	font-weight: 500;
+}
+
+.projects-container {
+	max-width: 100%;
+	position: relative;
+	margin: 2rem auto;
+}
+
+.project-carousel {
+	display: flex;
+	gap: 2rem;
+	overflow-x: auto;
+	scroll-snap-type: x mandatory;
+	scroll-behavior: smooth;
+	-webkit-overflow-scrolling: touch;
+	padding-bottom: 1rem;
+	scrollbar-width: none;
+}
+
+.project-carousel::-webkit-scrollbar {
+	display: none;
+}
+
+.project-card {
+	scroll-snap-align: center;
+	flex: 0 0 calc(100%);
+	min-width: calc(100% - 2rem);
+	transition: transform 0.3s ease;
+}
+
+/* Scroll buttons */
+.project-carousel::scroll-button(left) {
+	content: "<" / "Scroll Left";
+	position: absolute;
+	top: 50%;
+	left: 1rem;
+}
+
+.project-carousel::scroll-button(right) {
+	content: ">" / "Scroll Right";
+	position: absolute;
+	top: 50%;
+	right: 1rem;
+}
+
+.project-carousel::scroll-button(*) {
+	opacity: 0.75;
+	cursor: pointer;
+	transform: translateY(-50%);
+	color: var(--language-text);
+	background-color: var(--language-bg);
+	border: var(--border);
+	border-radius: 50%;
+	padding: 1rem;
+	width: 40px;
+	height: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: all 0.2s ease;
+}
+
+.project-carousel::scroll-button(*):hover {
+	opacity: 1;
+	transform: translateY(-50%) scale(1.1);
+}
+
+/* Scroll markers*/
+.project-carousel {
+	scroll-marker-group: after;
+}
+
+.project-carousel::scroll-marker-group {
+	display: flex;
+	justify-content: center;
+	gap: 0.5rem;
+	width: 100%;
+	margin-top: 1rem;
+}
+
+.project-card::scroll-marker {
+	content: '●' / "Go to project";
+	margin: 0 0.25rem;
+	color: var(--language-bg);
+	text-decoration: none;
+}
+
+.project-card::scroll-marker:target-current {
+	color: var(--language-text);
+}
+
+@media (min-width: 700px) {
+	.project-card {
+		flex: 0 0 calc(33.33% - 2rem);
+		min-width: calc(33.33% - 2rem);
+	}
+}
+
+.project-detail-container {
+  max-width: 800px;
+  margin: 5rem auto;
+  padding: 1rem;
+}
+
+.project-detail-container img {
+  max-width: 100%;
+  border-radius: 12px;
+  margin: 1rem 0;
+}
+
+#project-tech {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+
+/* Media queries for larger screens */
+@media (min-width: 700px) {
+    .projects-title {
+		max-width: 960px;
+		margin: 0 auto;
+		padding: 1rem 1rem;
+	}
+
+	/* .projects-container {
+		max-width: 100%;
+		margin: 0 auto;
+		padding: 0 1rem;
+	} */
+
+	.project-grid {
+		grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+		max-width: 2560px;
+	}
+}
+
+/* --- Assignment fields: scoped helpers --- */
+
+.project-kv dl {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 0.5rem 1rem;
+  margin: 1rem 0 0.75rem;
+}
+
+.project-kv dt {
+  font-weight: 600;
+  color: var(--language-text);
+}
+
+.project-kv dd {
+  margin: 0;
+}
+
+.tool-list,
+.result-list,
+.lesson-list {
+  padding-left: 1.25rem; /* override global ul padding */
+  margin: 0.25rem 0 0.5rem;
+}
+
+.tool-list li,
+.result-list li,
+.lesson-list li {
+  margin: 0.15rem 0;
+}
+
+.project-cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.project-cta .btn {
+  display: inline-block;
+  border: var(--border);
+  background: var(--language-bg);
+  color: var(--language-text);
+  padding: 0.4rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.project-cta .btn:focus,
+.project-cta .btn:hover {
+  outline: none;
+  transform: translateY(-1px);
+}
+
+/* Slight tightening inside project cards so lists don't look crowded */
+.project-content .project-description {
+  margin-bottom: 0.75rem;
+}
+
+/* Responsive: align labels nicely on small screens */
+@media (max-width: 480px) {
+  .project-kv dl {
+    grid-template-columns: 1fr;
+  }
+}
