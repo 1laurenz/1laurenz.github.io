@@ -1,0 +1,1357 @@
+---
+import Base from "../layouts/Base.astro";
+import "../styles/index.scss";
+---
+
+<Base>
+  <header class="site-header" id="siteHeader">
+    <div class="header-shell">
+      <!-- Desktop -->
+      <div class="desktop-wrap">
+        <!-- Full desktop nav -->
+        <nav
+          class="desktop-nav"
+          id="desktopNav"
+          aria-label="Primary navigation"
+        >
+          <a href="/" class="avatar" aria-label="Home">
+            <img
+              src="https://framerusercontent.com/images/IUYreEo8ON7qCLgK2tgDOW0xoI.jpg"
+              alt="Avatar"
+            />
+          </a>
+
+          <div class="desktop-links">
+            <a class="nav-link" href="/">Home</a>
+            <a class="nav-link" href="/about">About</a>
+            <a class="nav-link" href="/projects">Projects</a>
+            <a class="nav-link" href="/blogs">Blogs</a>
+          </div>
+
+          <a class="contact-btn desktop-contact" href="/#contact">Contact</a>
+        </nav>
+
+        <!-- Compact desktop nav (shown on scroll down) -->
+        <div class="desktop-compact" id="desktopCompact" aria-hidden="true">
+          <a href="/" class="avatar" aria-label="Home">
+            <img
+              src="https://framerusercontent.com/images/IUYreEo8ON7qCLgK2tgDOW0xoI.jpg"
+              alt="Avatar"
+            />
+          </a>
+
+          <div class="compact-status">
+            <span>Available for work</span>
+            <span class="dot" aria-hidden="true"></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile -->
+      <nav class="mobile-nav" aria-label="Mobile navigation">
+        <div class="mobile-shell">
+          <div class="mobile-topbar">
+            <a href="/" class="avatar" aria-label="Home">
+              <img
+                src="https://framerusercontent.com/images/IUYreEo8ON7qCLgK2tgDOW0xoI.jpg"
+                alt="Avatar"
+              />
+            </a>
+
+            <div class="mobile-status">
+              <span>Available for work</span>
+              <span class="dot" aria-hidden="true"></span>
+            </div>
+
+            <button
+              id="menuToggle"
+              class="menu-toggle"
+              type="button"
+              aria-label="Open menu"
+              aria-expanded="false"
+              aria-controls="mobileMenu"
+            >
+              <span class="bar top" aria-hidden="true"></span>
+              <span class="bar bottom" aria-hidden="true"></span>
+            </button>
+          </div>
+
+          <div class="mobile-panel" id="mobileMenu" aria-hidden="true">
+            <div class="mobile-links">
+              <a class="nav-link" href="/">Home</a>
+              <a class="nav-link" href="/about">About</a>
+              <a class="nav-link" href="/projects">Projects</a>
+              <a class="nav-link" href="/blogs">Blogs</a>
+            </div>
+
+            <div class="mobile-contact-wrap">
+              <a class="contact-btn mobile-contact" href="/#contact">Contact</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="home">
+    <!-- hero -->
+
+    <!-- top status pill (desktop-style header element from the page) -->
+    <div class="status-pill" aria-label="Availability">
+      <span class="status-avatar">
+        <img
+          src="https://framerusercontent.com/images/IUYreEo8ON7qCLgK2tgDOW0xoI.jpg"
+          alt="Avatar"
+        />
+      </span>
+      <span class="status-text">Available for work</span>
+      <span class="status-dot" aria-hidden="true"></span>
+    </div>
+
+    <!-- Shared floating card (desktop only animation) -->
+    <div class="floating-stage" aria-hidden="true">
+      <div class="floating-card" id="floatingCard">
+        <div class="floating-face floating-face-front" id="floatingFaceFront">
+          <img
+            src="https://framerusercontent.com/images/qrxY8NagVO40NBrdhFEGgFR3PYY.jpg?width=620&height=630"
+            alt=""
+          />
+        </div>
+
+        <div class="floating-face floating-face-back" id="floatingFaceBack">
+          <img
+            src="https://framerusercontent.com/images/qbjsnnvP9w7UaA2syp36oUe8OSo.jpg"
+            alt=""
+          />
+        </div>
+
+        <div class="floating-badge" id="floatingBadge">
+          <span>Hi</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- HERO -->
+    <section class="hero" id="hero">
+      <div class="hero-inner">
+        <div class="hero-copy hero-copy-left">
+          <p class="hero-name">DUNCAN ROBERT</p>
+          <h1 class="hero-title">DIGITAL</h1>
+        </div>
+
+        <!-- desktop spacer for shared floating card -->
+        <div
+          class="shared-card-slot shared-card-slot-hero"
+          id="slotHero"
+          aria-hidden="true"
+        >
+        </div>
+
+        <div class="hero-copy hero-copy-right">
+          <h1 class="hero-title">DESIGNER</h1>
+          <p class="hero-subtitle">
+            I'm a US-based digital designer and Framer developer
+          </p>
+        </div>
+
+        <!-- mobile-only inline portrait -->
+        <div class="hero-mobile-card">
+          <div class="hero-mobile-image">
+            <img
+              src="https://framerusercontent.com/images/qrxY8NagVO40NBrdhFEGgFR3PYY.jpg?width=620&height=630"
+              alt="Portrait of Duncan"
+            />
+            <div class="hero-mobile-badge">🖐</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="services-section" id="services">
+      <div class="services-wrap">
+        <div class="services-content">
+          <div class="services-copy">
+            <h2>WHAT I CAN DO FOR YOU</h2>
+            <p>
+              As a digital designer, I am a visual storyteller, crafting
+              experiences that connect deeply and spark creativity.
+            </p>
+          </div>
+
+          <div class="services-accordion" id="servicesAccordion">
+            <div class="service-item is-open">
+              <button
+                class="service-trigger"
+                type="button"
+                aria-expanded="true"
+              >
+                <span class="service-title">1. UI/UX DESIGN</span>
+                <span class="service-chevron" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="none">
+                    <path
+                      d="M6 14L12 8L18 14"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"></path>
+                  </svg>
+                </span>
+              </button>
+              <div class="service-panel">
+                <ul class="service-list">
+                  <li>
+                    <span class="check" aria-hidden="true"
+                      ><svg
+                        viewBox="0 0 24 24"
+                        width="16"
+                        height="16"
+                        fill="none"
+                        ><circle
+                          cx="12"
+                          cy="12"
+                          r="10"
+                          stroke="currentColor"
+                          stroke-width="1.5"></circle><path
+                          d="M7.5 12.2L10.4 15L16.5 9"
+                          stroke="currentColor"
+                          stroke-width="1.7"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"></path></svg
+                      ></span
+                    ><span>Wireframing and prototyping</span>
+                  </li>
+                  <li>
+                    <span class="check" aria-hidden="true"
+                      ><svg
+                        viewBox="0 0 24 24"
+                        width="16"
+                        height="16"
+                        fill="none"
+                        ><circle
+                          cx="12"
+                          cy="12"
+                          r="10"
+                          stroke="currentColor"
+                          stroke-width="1.5"></circle><path
+                          d="M7.5 12.2L10.4 15L16.5 9"
+                          stroke="currentColor"
+                          stroke-width="1.7"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"></path></svg
+                      ></span
+                    ><span>User Interface design for web and mobile apps</span>
+                  </li>
+                  <li>
+                    <span class="check" aria-hidden="true"
+                      ><svg
+                        viewBox="0 0 24 24"
+                        width="16"
+                        height="16"
+                        fill="none"
+                        ><circle
+                          cx="12"
+                          cy="12"
+                          r="10"
+                          stroke="currentColor"
+                          stroke-width="1.5"></circle><path
+                          d="M7.5 12.2L10.4 15L16.5 9"
+                          stroke="currentColor"
+                          stroke-width="1.7"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"></path></svg
+                      ></span
+                    ><span>Usability testing and user feedback analysis</span>
+                  </li>
+                  <li>
+                    <span class="check" aria-hidden="true"
+                      ><svg
+                        viewBox="0 0 24 24"
+                        width="16"
+                        height="16"
+                        fill="none"
+                        ><circle
+                          cx="12"
+                          cy="12"
+                          r="10"
+                          stroke="currentColor"
+                          stroke-width="1.5"></circle><path
+                          d="M7.5 12.2L10.4 15L16.5 9"
+                          stroke="currentColor"
+                          stroke-width="1.7"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"></path></svg
+                      ></span
+                    ><span>Interaction design and micro-animations</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="service-item">
+              <button
+                class="service-trigger"
+                type="button"
+                aria-expanded="false"
+              >
+                <span class="service-title">2. GRAPHIC DESIGN</span>
+                <span class="service-chevron" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="none">
+                    <path
+                      d="M6 10L12 16L18 10"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"></path>
+                  </svg>
+                </span>
+              </button>
+              <div class="service-panel" hidden>
+                <ul class="service-list">
+                  <li>
+                    <span class="check" aria-hidden="true"
+                      ><svg
+                        viewBox="0 0 24 24"
+                        width="16"
+                        height="16"
+                        fill="none"
+                        ><circle
+                          cx="12"
+                          cy="12"
+                          r="10"
+                          stroke="currentColor"
+                          stroke-width="1.5"></circle><path
+                          d="M7.5 12.2L10.4 15L16.5 9"
+                          stroke="currentColor"
+                          stroke-width="1.7"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"></path></svg
+                      ></span
+                    ><span>Logo and brand identity design</span>
+                  </li>
+                  <li>
+                    <span class="check" aria-hidden="true"
+                      ><svg
+                        viewBox="0 0 24 24"
+                        width="16"
+                        height="16"
+                        fill="none"
+                        ><circle
+                          cx="12"
+                          cy="12"
+                          r="10"
+                          stroke="currentColor"
+                          stroke-width="1.5"></circle><path
+                          d="M7.5 12.2L10.4 15L16.5 9"
+                          stroke="currentColor"
+                          stroke-width="1.7"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"></path></svg
+                      ></span
+                    ><span>Social media graphics and ad creatives</span>
+                  </li>
+                  <li>
+                    <span class="check" aria-hidden="true"
+                      ><svg
+                        viewBox="0 0 24 24"
+                        width="16"
+                        height="16"
+                        fill="none"
+                        ><circle
+                          cx="12"
+                          cy="12"
+                          r="10"
+                          stroke="currentColor"
+                          stroke-width="1.5"></circle><path
+                          d="M7.5 12.2L10.4 15L16.5 9"
+                          stroke="currentColor"
+                          stroke-width="1.7"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"></path></svg
+                      ></span
+                    ><span>Infographics and data visualization</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="service-item">
+              <button
+                class="service-trigger"
+                type="button"
+                aria-expanded="false"
+              >
+                <span class="service-title">3. WEB DESIGN</span>
+                <span class="service-chevron" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="none">
+                    <path
+                      d="M6 10L12 16L18 10"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"></path>
+                  </svg>
+                </span>
+              </button>
+              <div class="service-panel" hidden>
+                <ul class="service-list">
+                  <li>
+                    <span class="check" aria-hidden="true"
+                      ><svg
+                        viewBox="0 0 24 24"
+                        width="16"
+                        height="16"
+                        fill="none"
+                        ><circle
+                          cx="12"
+                          cy="12"
+                          r="10"
+                          stroke="currentColor"
+                          stroke-width="1.5"></circle><path
+                          d="M7.5 12.2L10.4 15L16.5 9"
+                          stroke="currentColor"
+                          stroke-width="1.7"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"></path></svg
+                      ></span
+                    ><span>Responsive website design</span>
+                  </li>
+                  <li>
+                    <span class="check" aria-hidden="true"
+                      ><svg
+                        viewBox="0 0 24 24"
+                        width="16"
+                        height="16"
+                        fill="none"
+                        ><circle
+                          cx="12"
+                          cy="12"
+                          r="10"
+                          stroke="currentColor"
+                          stroke-width="1.5"></circle><path
+                          d="M7.5 12.2L10.4 15L16.5 9"
+                          stroke="currentColor"
+                          stroke-width="1.7"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"></path></svg
+                      ></span
+                    ><span>Landing page design and optimization</span>
+                  </li>
+                  <li>
+                    <span class="check" aria-hidden="true"
+                      ><svg
+                        viewBox="0 0 24 24"
+                        width="16"
+                        height="16"
+                        fill="none"
+                        ><circle
+                          cx="12"
+                          cy="12"
+                          r="10"
+                          stroke="currentColor"
+                          stroke-width="1.5"></circle><path
+                          d="M7.5 12.2L10.4 15L16.5 9"
+                          stroke="currentColor"
+                          stroke-width="1.7"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"></path></svg
+                      ></span
+                    ><span>Webflow development and customization</span>
+                  </li>
+                  <li>
+                    <span class="check" aria-hidden="true"
+                      ><svg
+                        viewBox="0 0 24 24"
+                        width="16"
+                        height="16"
+                        fill="none"
+                        ><circle
+                          cx="12"
+                          cy="12"
+                          r="10"
+                          stroke="currentColor"
+                          stroke-width="1.5"></circle><path
+                          d="M7.5 12.2L10.4 15L16.5 9"
+                          stroke="currentColor"
+                          stroke-width="1.7"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"></path></svg
+                      ></span
+                    ><span>Website maintenance and updates</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="service-item">
+              <button
+                class="service-trigger"
+                type="button"
+                aria-expanded="false"
+              >
+                <span class="service-title">4. BRANDING</span>
+                <span class="service-chevron" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="none">
+                    <path
+                      d="M6 10L12 16L18 10"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"></path>
+                  </svg>
+                </span>
+              </button>
+              <div class="service-panel" hidden>
+                <ul class="service-list">
+                  <li>
+                    <span class="check" aria-hidden="true"
+                      ><svg
+                        viewBox="0 0 24 24"
+                        width="16"
+                        height="16"
+                        fill="none"
+                        ><circle
+                          cx="12"
+                          cy="12"
+                          r="10"
+                          stroke="currentColor"
+                          stroke-width="1.5"></circle><path
+                          d="M7.5 12.2L10.4 15L16.5 9"
+                          stroke="currentColor"
+                          stroke-width="1.7"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"></path></svg
+                      ></span
+                    ><span>Brand strategy and identity development</span>
+                  </li>
+                  <li>
+                    <span class="check" aria-hidden="true"
+                      ><svg
+                        viewBox="0 0 24 24"
+                        width="16"
+                        height="16"
+                        fill="none"
+                        ><circle
+                          cx="12"
+                          cy="12"
+                          r="10"
+                          stroke="currentColor"
+                          stroke-width="1.5"></circle><path
+                          d="M7.5 12.2L10.4 15L16.5 9"
+                          stroke="currentColor"
+                          stroke-width="1.7"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"></path></svg
+                      ></span
+                    ><span>Visual style guide creation</span>
+                  </li>
+                  <li>
+                    <span class="check" aria-hidden="true"
+                      ><svg
+                        viewBox="0 0 24 24"
+                        width="16"
+                        height="16"
+                        fill="none"
+                        ><circle
+                          cx="12"
+                          cy="12"
+                          r="10"
+                          stroke="currentColor"
+                          stroke-width="1.5"></circle><path
+                          d="M7.5 12.2L10.4 15L16.5 9"
+                          stroke="currentColor"
+                          stroke-width="1.7"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"></path></svg
+                      ></span
+                    ><span>Typography and color scheme selection</span>
+                  </li>
+                  <li>
+                    <span class="check" aria-hidden="true"
+                      ><svg
+                        viewBox="0 0 24 24"
+                        width="16"
+                        height="16"
+                        fill="none"
+                        ><circle
+                          cx="12"
+                          cy="12"
+                          r="10"
+                          stroke="currentColor"
+                          stroke-width="1.5"></circle><path
+                          d="M7.5 12.2L10.4 15L16.5 9"
+                          stroke="currentColor"
+                          stroke-width="1.7"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"></path></svg
+                      ></span
+                    ><span>Brand storytelling and messaging</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- desktop spacer for shared card -->
+        <div
+          class="shared-card-slot shared-card-slot-services"
+          id="slotServices"
+          aria-hidden="true"
+        >
+        </div>
+
+        <!-- mobile inline image -->
+        <div class="services-mobile-visual" aria-hidden="true">
+          <div class="services-mobile-card">
+            <img
+              src="https://framerusercontent.com/images/qbjsnnvP9w7UaA2syp36oUe8OSo.jpg"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="about-section" id="about">
+      <div class="about-container">
+        <div class="about-grid">
+          <div class="about-content">
+            <div class="about-copy">
+              <h2 class="about-title">ABOUT ME</h2>
+              <p class="about-description">
+                Hi, I'm Duncan — a digital designer and Framer developer
+                passionate about crafting meaningful and impactful digital
+                experiences.
+              </p>
+            </div>
+
+            <div class="about-stats" aria-label="Key stats">
+              <div class="stat">
+                <div class="stat-number">12</div>
+                <div class="stat-label">Years of Experience</div>
+              </div>
+              <div class="stat">
+                <div class="stat-number">270</div>
+                <div class="stat-label">Completed Projects</div>
+              </div>
+              <div class="stat">
+                <div class="stat-number">50+</div>
+                <div class="stat-label">Clients on Worldwide</div>
+              </div>
+            </div>
+
+            <div class="about-contact">
+              <div class="contact-item">
+                <span class="contact-label">Call Today :</span>
+                <a href="tel:+15551234567" class="contact-link"
+                  >+1 (555) 123-4567</a
+                >
+              </div>
+              <div class="contact-item">
+                <span class="contact-label">Email :</span>
+                <a href="mailto:designer@example.com" class="contact-link"
+                  >designer@example.com</a
+                >
+              </div>
+            </div>
+
+            <div class="about-social" aria-label="Social links">
+              <a href="#" aria-label="X">
+                <svg viewBox="0 0 24 24" aria-hidden="true"
+                  ><path
+                    d="M18.244 2H21l-6.56 7.497L22.16 22h-6.05l-4.736-6.19L5.95 22H3.19l7.015-8.018L1.84 2h6.204l4.28 5.647L18.244 2Zm-2.12 18h1.676L7.13 3.895H5.332L16.124 20Z"
+                  ></path></svg
+                >
+              </a>
+              <a href="#" aria-label="Instagram">
+                <svg viewBox="0 0 24 24" aria-hidden="true"
+                  ><path
+                    d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2Zm0 1.8A3.95 3.95 0 0 0 3.8 7.75v8.5a3.95 3.95 0 0 0 3.95 3.95h8.5a3.95 3.95 0 0 0 3.95-3.95v-8.5a3.95 3.95 0 0 0-3.95-3.95h-8.5Zm8.95 1.35a1.15 1.15 0 1 1 0 2.3 1.15 1.15 0 0 1 0-2.3ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 1.8A3.2 3.2 0 1 0 12 15.2 3.2 3.2 0 0 0 12 8.8Z"
+                  ></path></svg
+                >
+              </a>
+              <a href="#" aria-label="Behance">
+                <svg viewBox="0 0 24 24" aria-hidden="true"
+                  ><path
+                    d="M4 6.5A1.5 1.5 0 0 1 5.5 5h5.3c2.45 0 4.05 1.18 4.05 3.32 0 1.22-.55 2.08-1.55 2.58 1.37.42 2.12 1.53 2.12 3.07 0 2.47-1.92 4.03-4.86 4.03H5.5A1.5 1.5 0 0 1 4 16.5v-10Zm3 2v2.2h3.35c.97 0 1.55-.4 1.55-1.13 0-.74-.58-1.07-1.55-1.07H7Zm0 4.6v2.4h3.83c1.08 0 1.72-.43 1.72-1.2 0-.82-.64-1.2-1.72-1.2H7Zm9.7-5.84h5.8v1.55h-5.8V7.26Zm2.95 2.18c2.87 0 4.35 1.88 4.35 4.68 0 .26-.02.53-.06.84h-6.64c.17 1.3 1.04 1.96 2.33 1.96.98 0 1.62-.37 2.01-1h2.15c-.57 1.77-2.14 2.82-4.23 2.82-2.88 0-4.75-1.9-4.75-4.7 0-2.75 1.88-4.6 4.84-4.6Zm2.1 3.78c-.12-1.13-.92-1.77-2.08-1.77-1.13 0-1.92.62-2.19 1.77h4.27Z"
+                  ></path></svg
+                >
+              </a>
+              <a href="#" aria-label="Dribbble">
+                <svg viewBox="0 0 24 24" aria-hidden="true"
+                  ><path
+                    d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2Zm6.9 4.36a8.17 8.17 0 0 1 1.25 5.43 28.6 28.6 0 0 0-6-.12 24.9 24.9 0 0 0-1.28-2.4 15.97 15.97 0 0 0 6.03-2.91Zm-1.47-1.53a14.16 14.16 0 0 1-5.5 2.67A42.6 42.6 0 0 0 9.53 4.3 8.13 8.13 0 0 1 17.43 4.83ZM7.5 4.94a34.5 34.5 0 0 1 2.47 3.28 33.4 33.4 0 0 1-6.08.8A8.16 8.16 0 0 1 7.5 4.94ZM3.82 11.05h.17a35.5 35.5 0 0 0 7.18-1 22.6 22.6 0 0 1 1.08 2.03c-.28.03-.55.07-.83.12-4.1.63-6.28 2.39-7.12 3.21a8.08 8.08 0 0 1-.48-4.36Zm1.64 6.13c.64-.64 2.34-2.02 5.54-2.55.26-.04.52-.08.78-.11a31.9 31.9 0 0 1 1.71 5.19A8.17 8.17 0 0 1 5.46 17.18Zm9.92 2.18a33.9 33.9 0 0 0-1.58-4.84 26.1 26.1 0 0 1 5.95.26 8.17 8.17 0 0 1-4.37 4.58Z"
+                  ></path></svg
+                >
+              </a>
+            </div>
+
+            <div class="about-cta">
+              <a href="./about" class="story-btn">MY STORY</a>
+            </div>
+          </div>
+
+          <!-- desktop spacer for shared card -->
+          <div
+            class="shared-card-slot shared-card-slot-about"
+            id="slotAbout"
+            aria-hidden="true"
+          >
+          </div>
+
+          <!-- mobile inline image -->
+          <div class="about-mobile-visual" aria-hidden="true">
+            <div class="about-mobile-card">
+              <img
+                src="https://framerusercontent.com/images/qrxY8NagVO40NBrdhFEGgFR3PYY.jpg?width=620&height=630"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- projects -->
+
+    <section class="projects" id="projects" aria-labelledby="projectsTitle">
+      <div class="projects-container">
+        <header class="projects-header">
+          <h2 class="projects-title" id="projectsTitle">FEATURED PROJECTS</h2>
+          <p class="projects-lede">
+            These selected projects reflect my passion for blending strategy
+            with creativity — solving real problems through thoughtful design
+            and impactful storytelling.
+          </p>
+        </header>
+
+        <!-- Desktop animation wrapper -->
+        <div class="projects-stack" id="projectsStack">
+          <div class="projects-stage" id="projectsStage" aria-hidden="true">
+          </div>
+
+          <!-- Keep the list in the DOM for structure; on desktop JS will move items into the stage -->
+          <div class="projects-list" id="projectsList" role="list">
+            <!-- Project 1 -->
+            <article class="project" role="listitem">
+              <a
+                class="project-cover"
+                href="./projects/summer-vibes-festival-campaign"
+                aria-label="Summer Vibes Festival Campaign"
+              >
+                <img
+                  class="project-img"
+                  src="https://framerusercontent.com/images/w08JBQPFYIq2vr4OfcD9W6vxEug.jpeg"
+                  alt="Featured Project Cover Image"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <div class="project-overlay" aria-hidden="true"></div>
+
+                <div class="project-info" aria-hidden="true">
+                  <div class="project-badge">Graphic Design</div>
+                  <h3 class="project-name">SUMMER VIBES FESTIVAL CAMPAIGN</h3>
+                  <p class="project-desc project-desc--overlay">
+                    Created promotional materials for the "Summer Vibes
+                    Festival," including posters, flyers, and social media
+                    graphics.
+                  </p>
+                </div>
+              </a>
+
+              <!-- Mobile copy (kept as real DOM content) -->
+              <p class="project-desc project-desc--below">
+                Created promotional materials for the "Summer Vibes Festival,"
+                including posters, flyers, and social media graphics.
+              </p>
+            </article>
+
+            <!-- Project 2 -->
+            <article class="project" role="listitem">
+              <a
+                class="project-cover"
+                href="./projects/coral-spiral-abstract"
+                aria-label="Coral Spiral Abstract"
+              >
+                <img
+                  class="project-img"
+                  src="https://framerusercontent.com/images/qbjsnnvP9w7UaA2syp36oUe8OSo.jpg"
+                  alt="Featured Project Cover Image"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <div class="project-overlay" aria-hidden="true"></div>
+
+                <div class="project-info" aria-hidden="true">
+                  <div class="project-badge">Branding</div>
+                  <h3 class="project-name">CORAL SPIRAL ABSTRACT</h3>
+                  <p class="project-desc project-desc--overlay">
+                    Description: A visually striking 3D abstract artwork
+                    featuring a coral-colored spiral form with smooth, flowing
+                    curves and a soft pink gradient background, emphasizing
+                    modern digital aesthetics and organic geometry.
+                  </p>
+                </div>
+              </a>
+
+              <p class="project-desc project-desc--below">
+                Description: A visually striking 3D abstract artwork featuring a
+                coral-colored spiral form with smooth, flowing curves and a soft
+                pink gradient background, emphasizing modern digital aesthetics
+                and organic geometry.
+              </p>
+            </article>
+
+            <!-- Project 3 -->
+            <article class="project" role="listitem">
+              <a
+                class="project-cover"
+                href="./projects/shopease-redesign-sprint"
+                aria-label="ShopEase Redesign Sprint"
+              >
+                <img
+                  class="project-img"
+                  src="https://framerusercontent.com/images/nTU7b0ZAdWdlqCI4mQ4tGTPpDs.jpeg"
+                  alt="Featured Project Cover Image"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <div class="project-overlay" aria-hidden="true"></div>
+
+                <div class="project-info" aria-hidden="true">
+                  <div class="project-badge">UI / UX Design</div>
+                  <h3 class="project-name">SHOPEASE REDESIGN SPRINT</h3>
+                  <p class="project-desc project-desc--overlay">
+                    Redesigned the "ShopEase" e-commerce app to enhance user
+                    experience. Focused on simplifying navigation, optimizing
+                    the checkout process, and incorporating a sleek.
+                  </p>
+                </div>
+              </a>
+
+              <p class="project-desc project-desc--below">
+                Redesigned the "ShopEase" e-commerce app to enhance user
+                experience. Focused on simplifying navigation, optimizing the
+                checkout process, and incorporating a sleek.
+              </p>
+            </article>
+
+            <!-- Project 4 -->
+            <article class="project" role="listitem">
+              <a
+                class="project-cover"
+                href="./projects/black-geometric-prisms"
+                aria-label="Black Geometric Prisms"
+              >
+                <img
+                  class="project-img"
+                  src="https://framerusercontent.com/images/2nWXrWvPxxMHSpsOkNYf8KjzP7Q.jpeg"
+                  alt="Featured Project Cover Image"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <div class="project-overlay" aria-hidden="true"></div>
+
+                <div class="project-info" aria-hidden="true">
+                  <div class="project-badge">Branding</div>
+                  <h3 class="project-name">BLACK GEOMETRIC PRISMS</h3>
+                  <p class="project-desc project-desc--overlay">
+                    A collection of sharp, angular black prisms floating against
+                    a gradient dark background, showcasing a modern and
+                    sophisticated approach to digital 3D geometric composition.
+                  </p>
+                </div>
+              </a>
+
+              <p class="project-desc project-desc--below">
+                A collection of sharp, angular black prisms floating against a
+                gradient dark background, showcasing a modern and sophisticated
+                approach to digital 3D geometric composition.
+              </p>
+            </article>
+          </div>
+        </div>
+
+        <div class="projects-cta">
+          <a
+            class="projects-btn"
+            href="./projects"
+            aria-label="Browse All Projects"
+          >
+            <span>BROWSE ALL PROJECTS</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section
+      class="testimonials"
+      id="testimonials"
+      aria-labelledby="testimonialsTitle"
+    >
+      <div class="testimonials-container">
+        <header class="testimonials-header">
+          <h2 class="testimonials-title" id="testimonialsTitle">
+            WHAT MY CLIENTS SAY
+          </h2>
+          <p class="testimonials-lede">
+            Here’s what my clients have shared about their experiences working
+            with me. Their trust and satisfaction motivate me to continue
+            delivering designs that make an impact.
+          </p>
+        </header>
+
+        <div
+          class="testimonials-grid"
+          role="list"
+          aria-label="Client testimonials"
+        >
+          <!-- Card 1 -->
+          <article class="t-card t-card--quote" role="listitem">
+            <div class="t-stars" aria-label="5 out of 5 stars">
+              <span class="t-star" aria-hidden="true"></span>
+              <span class="t-star" aria-hidden="true"></span>
+              <span class="t-star" aria-hidden="true"></span>
+              <span class="t-star" aria-hidden="true"></span>
+              <span class="t-star" aria-hidden="true"></span>
+            </div>
+
+            <p class="t-quote">
+              Duncan truly understood my vision and turned it into impactful
+              designs. The results went beyond my expectations!
+            </p>
+
+            <div class="t-person">
+              <span class="t-avatar">
+                <img
+                  src="https://framerusercontent.com/images/xPotMb4VrNT5rTGtXQvpYqXunU.jpg?width=400&height=400"
+                  alt="John Harris"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </span>
+              <div class="t-person-meta">
+                <div class="t-name">John Harris</div>
+                <div class="t-role">Marketing Director</div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="t-card t-card--quote" role="listitem">
+            <div class="t-stars" aria-label="5 out of 5 stars">
+              <span class="t-star" aria-hidden="true"></span>
+              <span class="t-star" aria-hidden="true"></span>
+              <span class="t-star" aria-hidden="true"></span>
+              <span class="t-star" aria-hidden="true"></span>
+              <span class="t-star" aria-hidden="true"></span>
+            </div>
+
+            <p class="t-quote">
+              He took the time to understand our goals and delivered a design
+              that resonated perfectly with our audience.
+            </p>
+
+            <div class="t-person">
+              <span class="t-avatar">
+                <img
+                  src="https://framerusercontent.com/images/hleE21gbHw2Y29KULoer3tF8.jpg?width=400&height=400"
+                  alt="Michael Lee"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </span>
+              <div class="t-person-meta">
+                <div class="t-name">Michael Lee</div>
+                <div class="t-role">Product Manager</div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 3 (Dark stat) -->
+          <article
+            class="t-card t-card--stat t-card--dark"
+            role="listitem"
+            aria-label="Satisfaction stat"
+          >
+            <div class="t-stat-top">I’ve worked with 50+ happy clients</div>
+
+            <div class="t-stat-main">
+              <div class="t-stat-number">98%</div>
+              <div class="t-stat-label">Satisfaction Rate</div>
+            </div>
+          </article>
+
+          <!-- Card 4 (Accent stat) -->
+          <article
+            class="t-card t-card--stat t-card--accent"
+            role="listitem"
+            aria-label="Growth stat"
+          >
+            <div class="t-stat-top">
+              My work helped clients grow their revenue by 200%
+            </div>
+
+            <div class="t-stat-main">
+              <div class="t-stat-number">200%</div>
+              <div class="t-stat-label">Growth</div>
+            </div>
+          </article>
+
+          <!-- Card 5 -->
+          <article class="t-card t-card--quote" role="listitem">
+            <div class="t-stars" aria-label="5 out of 5 stars">
+              <span class="t-star" aria-hidden="true"></span>
+              <span class="t-star" aria-hidden="true"></span>
+              <span class="t-star" aria-hidden="true"></span>
+              <span class="t-star" aria-hidden="true"></span>
+              <span class="t-star" aria-hidden="true"></span>
+            </div>
+
+            <p class="t-quote">
+              His design skills are unmatched. He transformed my ideas into a
+              high-performing, visually striking website.
+            </p>
+
+            <div class="t-person">
+              <span class="t-avatar">
+                <img
+                  src="https://framerusercontent.com/images/RTNUbNmEH3Lg1VzA3NOYHdp3bHQ.jpg?width=400&height=400"
+                  alt="Sarah Johnson"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </span>
+              <div class="t-person-meta">
+                <div class="t-name">Sarah Johnson</div>
+                <div class="t-role">CEO</div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 6 -->
+          <article class="t-card t-card--quote" role="listitem">
+            <div class="t-stars" aria-label="5 out of 5 stars">
+              <span class="t-star" aria-hidden="true"></span>
+              <span class="t-star" aria-hidden="true"></span>
+              <span class="t-star" aria-hidden="true"></span>
+              <span class="t-star" aria-hidden="true"></span>
+              <span class="t-star" aria-hidden="true"></span>
+            </div>
+
+            <p class="t-quote">
+              As a small business owner, I appreciated how stress-free Duncan
+              made the process.
+            </p>
+
+            <div class="t-person">
+              <span class="t-avatar">
+                <img
+                  src="https://framerusercontent.com/images/ZbUvwGb7xhhwmovo3t9YO4bAIGs.jpg?width=400&height=400"
+                  alt="Laura Bennett"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </span>
+              <div class="t-person-meta">
+                <div class="t-name">Laura Bennett</div>
+                <div class="t-role">Small Business Owner</div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq" id="faq" aria-labelledby="faqTitle">
+      <div class="faq-container">
+        <div class="faq-grid">
+          <!-- Left / sticky copy (desktop) -->
+          <header class="faq-copy">
+            <h2 class="faq-title" id="faqTitle">FREQUENTLY ASKED QUESTIONS</h2>
+            <p class="faq-lede">
+              Here are answers to some of the most common questions I receive as
+              a freelance designer. If you don’t see your question here, feel
+              free to reach out—I’m happy to help!
+            </p>
+          </header>
+
+          <!-- Right / accordion -->
+          <div class="faq-accordion" id="faqAccordion">
+            <!-- 1 -->
+            <div class="faq-item is-open">
+              <button class="faq-trigger" type="button" aria-expanded="true">
+                <span class="faq-q">
+                  <span class="faq-num">1.</span>
+                  <span class="faq-text">WHAT SERVICES DO YOU OFFER?</span>
+                </span>
+                <span class="faq-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="none">
+                    <path
+                      d="M6 14L12 8L18 14"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"></path>
+                  </svg>
+                </span>
+              </button>
+              <div class="faq-panel">
+                <p>
+                  I specialize in UI/UX design, branding, web design, and
+                  development. Whether you need a complete website, a visual
+                  identity, or design consultation, I’m here to help bring your
+                  ideas to life.
+                </p>
+              </div>
+              <div class="faq-divider" aria-hidden="true"></div>
+            </div>
+
+            <!-- 2 -->
+            <div class="faq-item">
+              <button class="faq-trigger" type="button" aria-expanded="false">
+                <span class="faq-q">
+                  <span class="faq-num">2.</span>
+                  <span class="faq-text">HOW DOES THE DESIGN PROCESS WORK?</span
+                  >
+                </span>
+                <span class="faq-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="none">
+                    <path
+                      d="M6 10L12 16L18 10"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"></path>
+                  </svg>
+                </span>
+              </button>
+              <div class="faq-panel" hidden>
+                <p>
+                  We’ll start with a short discovery to align on goals,
+                  audience, and scope. From there, I move into structure
+                  (wireframes), visual design, and iteration. Once approved, I
+                  can support implementation and launch.
+                </p>
+              </div>
+              <div class="faq-divider" aria-hidden="true"></div>
+            </div>
+
+            <!-- 3 -->
+            <div class="faq-item">
+              <button class="faq-trigger" type="button" aria-expanded="false">
+                <span class="faq-q">
+                  <span class="faq-num">3.</span>
+                  <span class="faq-text"
+                    >HOW LONG DOES A PROJECT USUALLY TAKE?</span
+                  >
+                </span>
+                <span class="faq-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="none">
+                    <path
+                      d="M6 10L12 16L18 10"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"></path>
+                  </svg>
+                </span>
+              </button>
+              <div class="faq-panel" hidden>
+                <p>
+                  Timelines vary by scope, but most projects take between 2–6
+                  weeks. After a quick kickoff, I’ll share a clear schedule with
+                  milestones so you always know what’s next.
+                </p>
+              </div>
+              <div class="faq-divider" aria-hidden="true"></div>
+            </div>
+
+            <!-- 4 -->
+            <div class="faq-item">
+              <button class="faq-trigger" type="button" aria-expanded="false">
+                <span class="faq-q">
+                  <span class="faq-num">4.</span>
+                  <span class="faq-text"
+                    >WHAT DO I NEED TO PROVIDE BEFORE STARTING A PROJECT?</span
+                  >
+                </span>
+                <span class="faq-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="none">
+                    <path
+                      d="M6 10L12 16L18 10"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"></path>
+                  </svg>
+                </span>
+              </button>
+              <div class="faq-panel" hidden>
+                <p>
+                  A short brief is perfect: goals, target audience, references
+                  you like, required pages/features, and any existing brand
+                  assets (logo, colors, typography). If you don’t have these
+                  yet, I can help define them.
+                </p>
+              </div>
+              <div class="faq-divider" aria-hidden="true"></div>
+            </div>
+
+            <!-- 5 -->
+            <div class="faq-item">
+              <button class="faq-trigger" type="button" aria-expanded="false">
+                <span class="faq-q">
+                  <span class="faq-num">5.</span>
+                  <span class="faq-text">DO YOU OFFER REVISIONS?</span>
+                </span>
+                <span class="faq-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="none">
+                    <path
+                      d="M6 10L12 16L18 10"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"></path>
+                  </svg>
+                </span>
+              </button>
+              <div class="faq-panel" hidden>
+                <p>
+                  Yes. Revisions are part of the process—typically 2 rounds per
+                  milestone. If you need additional iterations, we can scope
+                  them in clearly so everything stays predictable.
+                </p>
+              </div>
+              <div class="faq-divider" aria-hidden="true"></div>
+            </div>
+
+            <!-- 6 -->
+            <div class="faq-item">
+              <button class="faq-trigger" type="button" aria-expanded="false">
+                <span class="faq-q">
+                  <span class="faq-num">6.</span>
+                  <span class="faq-text">HOW DO I GET STARTED?</span>
+                </span>
+                <span class="faq-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="none">
+                    <path
+                      d="M6 10L12 16L18 10"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"></path>
+                  </svg>
+                </span>
+              </button>
+              <div class="faq-panel" hidden>
+                <p>
+                  Send a message with a brief overview of what you’re building,
+                  your timeline, and any links or references. I’ll respond with
+                  next steps, a rough estimate, and we’ll schedule a quick
+                  kickoff call.
+                </p>
+              </div>
+              <div class="faq-divider" aria-hidden="true"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+  <section class="contact" id="contact" aria-labelledby="contactTitle">
+    <div class="contact-container">
+
+      <!-- Left visual -->
+      <div class="contact-visual" aria-hidden="true">
+        <div class="contact-portrait">
+          <img
+            src="https://framerusercontent.com/images/qrxY8NagVO40NBrdhFEGgFR3PYY.jpg?width=620&height=630"
+            alt=""
+            loading="lazy"
+            decoding="async"
+          />
+
+          <!-- Badge (desktop shows hand, mobile shows Hi like the screenshot) -->
+          <div class="contact-badge" aria-hidden="true">
+            <span class="badge-hi">Hi</span>
+
+            <!-- simple hand icon (inline svg so no external deps) -->
+            <svg class="badge-hand" viewBox="0 0 24 24" aria-hidden="true">
+              <path fill="currentColor" d="M12.3 2.2c.7 0 1.2.5 1.2 1.2v7.3h.7V4.7c0-.7.5-1.2 1.2-1.2s1.2.5 1.2 1.2v7.1h.7V6.1c0-.7.5-1.2 1.2-1.2S21 5.4 21 6.1v8.2c0 3.9-2.9 7.5-7.6 7.5-4.8 0-8.4-3.3-8.4-7.7V9.2c0-.7.5-1.2 1.2-1.2s1.2.5 1.2 1.2v4.4h.7V3.8c0-.7.5-1.2 1.2-1.2s1.2.5 1.2 1.2v7h.7V3.4c0-.7.5-1.2 1.2-1.2Z"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right form -->
+      <div class="contact-content">
+        <header class="contact-header">
+          <h2 class="contact-title" id="contactTitle">Let's work together</h2>
+          <p class="contact-lede">
+            Let’s build something impactful together—whether it’s your brand, your website, or your next big idea.
+          </p>
+        </header>
+
+        <form class="contact-form" id="contactForm" novalidate>
+          <div class="field-row">
+            <label class="field">
+              <span class="label">Name</span>
+              <input type="text" name="Name" placeholder="John Smith" autocomplete="name" required />
+            </label>
+
+            <label class="field">
+              <span class="label">Email</span>
+              <input type="email" name="Email" placeholder="johnsmith@gmail.com" autocomplete="email" required />
+            </label>
+          </div>
+
+          <label class="field">
+            <span class="label">Service Needed ?</span>
+            <div class="select-wrap">
+              <select name="Service" required>
+                <option value="" selected>Select…</option>
+                <option>Branding</option>
+                <option>Web design</option>
+                <option>Web Design</option>
+                <option>UI / UX</option>
+              </select>
+
+              <svg class="select-chevron" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M6 10L12 16L18 10" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+          </label>
+
+          <label class="field">
+            <span class="label">What Can I Help You...</span>
+            <textarea
+              name="Text Area"
+              placeholder="Hello, I'd like to enquire about..."
+              required
+            ></textarea>
+          </label>
+
+          <div class="actions">
+            <button class="submit-btn" type="submit">
+              <span>Submit</span>
+            </button>
+            <p class="form-note" id="formNote" aria-live="polite"></p>
+          </div>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  </main>
+
+  <footer>
+    
+  </footer>
+</Base>

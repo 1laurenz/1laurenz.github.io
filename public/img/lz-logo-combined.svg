@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="combined-dk" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 771 192.96">
+  <defs>
+    <style>
+      .cls-1 {
+        font-family: Montserrat-Bold, Montserrat;
+        font-size: 105.29px;
+        font-weight: 700;
+      }
+
+      .cls-1, .cls-2, .cls-3 {
+        fill: #231f20;
+      }
+
+      .cls-4 {
+        letter-spacing: -.05em;
+      }
+
+      .cls-5 {
+        letter-spacing: 0em;
+      }
+
+      .cls-3 {
+        font-family: Montserrat-Regular, Montserrat;
+        font-size: 79.44px;
+      }
+
+      .cls-6 {
+        letter-spacing: -.02em;
+      }
+    </style>
+  </defs>
+  <g>
+    <polyline class="cls-2" points="23.61 101.32 40.51 118.23 113.79 44.96 187.06 118.23 203.97 101.32 113.79 11.14 57.42 67.5"/>
+    <path class="cls-2" d="M46.13,123.85s11.21,11.81,11.21,11.37,45.2-45.15,45.2-45.15v90.13l11.25,11.13,67.64-67.47-11.27-11.27-45.09,45.09v-90.18l-11.27-11.27L46.13,123.85Z"/>
+  </g>
+  <g>
+    <text class="cls-1" transform="translate(235.41 89.5) scale(.96 1)"><tspan class="cls-5" x="0" y="0">L</tspan><tspan class="cls-6" x="64.23" y="0">A</tspan><tspan x="143.3" y="0">URENZ</tspan></text>
+    <text class="cls-3" transform="translate(241.12 172.15) scale(1.04 1)"><tspan class="cls-4" x="0" y="0">W</tspan><tspan x="83.89" y="0">eb Design</tspan></text>
+  </g>
+</svg>

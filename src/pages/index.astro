@@ -1,0 +1,1469 @@
+---
+import Base from "../layouts/Base.astro";
+import "../styles/styles.scss";
+import "../styles/index.scss";
+---
+
+<Base>
+  <!-- ─────────────────────────────────────
+       LZ Navigation
+       ───────────────────────────────────── -->
+
+  <header id="lz-navigation">
+    <div class="lz-container">
+      <nav class="lz-navigation" aria-label="Primary navigation">
+        <div class="lz-navigation-topbar">
+          <a class="lz-avatar" href="/" aria-label="Home">
+            <img src="/img/lz-logo.svg" alt="Avatar" />
+          </a>
+
+          <div class="lz-navigation-status">
+            <span>Available for work</span>
+            <span class="lz-status-dot" aria-hidden="true"></span>
+          </div>
+
+          <button
+            id="lz-menu-toggle-button"
+            class="lz-menu-toggle-button"
+            type="button"
+            aria-label="Open menu"
+            aria-expanded="false"
+            aria-controls="lz-navigation-panel"
+          >
+            <span class="lz-menu-bar lz-menu-bar-top" aria-hidden="true"></span>
+            <span class="lz-menu-bar lz-menu-bar-bottom" aria-hidden="true"
+            ></span>
+          </button>
+
+          <div class="lz-navigation-links" aria-hidden="true">
+            <a class="lz-navigation-link" href="/">Home</a>
+            <a class="lz-navigation-link" href="#lz-home-about">About</a>
+            <a class="lz-navigation-link" href="#lz-home-projects">Projects</a>
+          </div>
+
+          <a
+            class="lz-contact-button lz-navigation-contact-button"
+            href="#lz-home-contact"
+            aria-hidden="true"
+          >
+            Contact
+          </a>
+        </div>
+
+        <div
+          id="lz-navigation-panel"
+          class="lz-navigation-panel"
+          aria-hidden="true"
+        >
+          <div class="lz-navigation-panel-links">
+            <a class="lz-navigation-link" href="/">Home</a>
+            <a class="lz-navigation-link" href="/about">About</a>
+            <a class="lz-navigation-link" href="/projects">Projects</a>
+          </div>
+
+          <div class="lz-navigation-panel-contact-wrapper">
+            <a
+              class="lz-contact-button lz-navigation-panel-contact-button"
+              href="/#lz-home-contact"
+            >
+              Contact
+            </a>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="lz-home">
+    <!-- ─────────────────────────────────────
+         LZ Shared Floating Card
+         ───────────────────────────────────── -->
+
+    <div class="lz-floating-stage" aria-hidden="true">
+      <div id="lz-floating-card" class="lz-floating-card">
+        <div
+          id="lz-floating-face-front"
+          class="lz-floating-face lz-floating-face-front"
+        >
+          <img src="/img/lz-portrait.jpg" alt="" />
+        </div>
+
+        <div
+          id="lz-floating-face-back"
+          class="lz-floating-face lz-floating-face-back"
+        >
+          <img
+            src=""
+            alt=""
+          />
+        </div>
+
+        <div id="lz-floating-badge" class="lz-floating-badge">
+          <span>Hi</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ─────────────────────────────────────
+         LZ Hero
+         ───────────────────────────────────── -->
+
+    <section id="lz-home-hero">
+      <div class="lz-container">
+        <div class="lz-content lz-content-left">
+          <p class="lz-name">Laurenz Sinchongco</p>
+          <p class="lz-title" aria-hidden="true">Full-stack</p>
+        </div>
+
+        <div
+          id="lz-hero-card-slot"
+          class="lz-shared-card-slot lz-shared-card-slot-hero"
+          aria-hidden="true"
+        >
+        </div>
+
+        <div class="lz-content lz-content-right">
+          <p class="lz-title" aria-hidden="true">Developer</p>
+
+          <p class="lz-text">I'm a full-stack developer</p>
+        </div>
+
+        <h1 class="lz-screen-reader-only">
+          Laurenz Sinchongco - Full-stack Developer
+        </h1>
+
+        <div class="lz-mobile-card">
+          <div class="lz-mobile-image">
+            <img src="/img/lz-portrait.jpg" alt="Portrait" />
+
+            <div class="lz-mobile-badge">🖐</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─────────────────────────────────────
+     LZ Services
+     ───────────────────────────────────── -->
+
+    <section id="lz-home-services">
+      <div class="lz-container">
+        <div class="lz-services-content">
+          <div class="lz-section-copy">
+            <h2>WHAT I CAN DO FOR YOU</h2>
+
+            <p>
+              I build practical websites, CMS workflows, documentation, and
+              user-facing systems that help teams publish content, manage data,
+              support users, and keep digital products accurate after launch.
+            </p>
+          </div>
+
+          <div id="lz-services-accordion" class="lz-accordion">
+            <div class="lz-accordion-item lz-is-open">
+              <button
+                class="lz-accordion-trigger"
+                type="button"
+                aria-expanded="true"
+              >
+                <span class="lz-title"
+                  >1. WEB DEVELOPMENT & API INTEGRATION</span
+                >
+
+                <span class="lz-chevron" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="none">
+                    <path
+                      d="M6 14L12 8L18 14"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"></path>
+                  </svg>
+                </span>
+              </button>
+
+              <div class="lz-accordion-panel">
+                <ul class="lz-list">
+                  <li>
+                    <span class="lz-check-icon" aria-hidden="true">
+                      <svg
+                        viewBox="0 0 24 24"
+                        width="16"
+                        height="16"
+                        fill="none"
+                      >
+                        <circle
+                          cx="12"
+                          cy="12"
+                          r="10"
+                          stroke="currentColor"
+                          stroke-width="1.5"></circle>
+                        <path
+                          d="M7.5 12.2L10.4 15L16.5 9"
+                          stroke="currentColor"
+                          stroke-width="1.7"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"></path>
+                      </svg>
+                    </span>
+                    <span
+                      >Responsive HTML, CSS, JavaScript, TypeScript, Astro,
+                      React, and Next.js interfaces</span
+                    >
+                  </li>
+                  <li>
+                    <span class="lz-check-icon" aria-hidden="true">
+                      <svg
+                        viewBox="0 0 24 24"
+                        width="16"
+                        height="16"
+                        fill="none"
+                      >
+                        <circle
+                          cx="12"
+                          cy="12"
+                          r="10"
+                          stroke="currentColor"
+                          stroke-width="1.5"></circle>
+                        <path
+                          d="M7.5 12.2L10.4 15L16.5 9"
+                          stroke="currentColor"
+                          stroke-width="1.7"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"></path>
+                      </svg>
+                    </span>
+                    <span
+                      >REST API integration using fetch(), JSON request/response
+                      handling, and dynamic UI updates</span
+                    >
+                  </li>
+                  <li>
+                    <span class="lz-check-icon" aria-hidden="true">
+                      <svg
+                        viewBox="0 0 24 24"
+                        width="16"
+                        height="16"
+                        fill="none"
+                      >
+                        <circle
+                          cx="12"
+                          cy="12"
+                          r="10"
+                          stroke="currentColor"
+                          stroke-width="1.5"></circle>
+                        <path
+                          d="M7.5 12.2L10.4 15L16.5 9"
+                          stroke="currentColor"
+                          stroke-width="1.7"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"></path>
+                      </svg>
+                    </span>
+                    <span
+                      >PHP, SQL, MySQL/phpMyAdmin, and CRUD-style form/database
+                      workflows</span
+                    >
+                  </li>
+                  <li>
+                    <span class="lz-check-icon" aria-hidden="true">
+                      <svg
+                        viewBox="0 0 24 24"
+                        width="16"
+                        height="16"
+                        fill="none"
+                      >
+                        <circle
+                          cx="12"
+                          cy="12"
+                          r="10"
+                          stroke="currentColor"
+                          stroke-width="1.5"></circle>
+                        <path
+                          d="M7.5 12.2L10.4 15L16.5 9"
+                          stroke="currentColor"
+                          stroke-width="1.7"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"></path>
+                      </svg>
+                    </span>
+                    <span
+                      >Performance-conscious, SEO-aware, cross-browser, and
+                      accessibility-minded implementation</span
+                    >
+                  </li>
+                </ul>
+              </div>
+
+              <div class="lz-divider" aria-hidden="true"></div>
+            </div>
+
+            <div class="lz-accordion-item">
+              <button
+                class="lz-accordion-trigger"
+                type="button"
+                aria-expanded="false"
+              >
+                <span class="lz-title">2. CMS & CONTENT IMPLEMENTATION</span>
+
+                <span class="lz-chevron" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="none">
+                    <path
+                      d="M6 10L12 16L18 10"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"></path>
+                  </svg>
+                </span>
+              </button>
+
+              <div class="lz-accordion-panel" hidden>
+                <ul class="lz-list">
+                  <li>
+                    <span class="lz-check-icon" aria-hidden="true">
+                      <svg
+                        viewBox="0 0 24 24"
+                        width="16"
+                        height="16"
+                        fill="none"
+                      >
+                        <circle
+                          cx="12"
+                          cy="12"
+                          r="10"
+                          stroke="currentColor"
+                          stroke-width="1.5"></circle>
+                        <path
+                          d="M7.5 12.2L10.4 15L16.5 9"
+                          stroke="currentColor"
+                          stroke-width="1.7"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"></path>
+                      </svg>
+                    </span>
+                    <span
+                      >WordPress, Decap CMS, and Sanity CMS configuration for
+                      non-technical editors</span
+                    >
+                  </li>
+                  <li>
+                    <span class="lz-check-icon" aria-hidden="true">
+                      <svg
+                        viewBox="0 0 24 24"
+                        width="16"
+                        height="16"
+                        fill="none"
+                      >
+                        <circle
+                          cx="12"
+                          cy="12"
+                          r="10"
+                          stroke="currentColor"
+                          stroke-width="1.5"></circle>
+                        <path
+                          d="M7.5 12.2L10.4 15L16.5 9"
+                          stroke="currentColor"
+                          stroke-width="1.7"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"></path>
+                      </svg>
+                    </span>
+                    <span
+                      >Custom fields, validation rules, structured content, and
+                      repeatable publishing workflows</span
+                    >
+                  </li>
+                  <li>
+                    <span class="lz-check-icon" aria-hidden="true">
+                      <svg
+                        viewBox="0 0 24 24"
+                        width="16"
+                        height="16"
+                        fill="none"
+                      >
+                        <circle
+                          cx="12"
+                          cy="12"
+                          r="10"
+                          stroke="currentColor"
+                          stroke-width="1.5"></circle>
+                        <path
+                          d="M7.5 12.2L10.4 15L16.5 9"
+                          stroke="currentColor"
+                          stroke-width="1.7"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"></path>
+                      </svg>
+                    </span>
+                    <span
+                      >Content migration, template setup, metadata checks, and
+                      clean JSON/YAML data organization</span
+                    >
+                  </li>
+                  <li>
+                    <span class="lz-check-icon" aria-hidden="true">
+                      <svg
+                        viewBox="0 0 24 24"
+                        width="16"
+                        height="16"
+                        fill="none"
+                      >
+                        <circle
+                          cx="12"
+                          cy="12"
+                          r="10"
+                          stroke="currentColor"
+                          stroke-width="1.5"></circle>
+                        <path
+                          d="M7.5 12.2L10.4 15L16.5 9"
+                          stroke="currentColor"
+                          stroke-width="1.7"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"></path>
+                      </svg>
+                    </span>
+                    <span
+                      >Questionnaire-style forms, clear page content, and
+                      intuitive user-facing content structures</span
+                    >
+                  </li>
+                </ul>
+              </div>
+
+              <div class="lz-divider" aria-hidden="true"></div>
+            </div>
+
+            <div class="lz-accordion-item">
+              <button
+                class="lz-accordion-trigger"
+                type="button"
+                aria-expanded="false"
+              >
+                <span class="lz-title">3. DOCUMENTATION & USER ENABLEMENT</span>
+
+                <span class="lz-chevron" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="none">
+                    <path
+                      d="M6 10L12 16L18 10"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"></path>
+                  </svg>
+                </span>
+              </button>
+
+              <div class="lz-accordion-panel" hidden>
+                <ul class="lz-list">
+                  <li>
+                    <span class="lz-check-icon" aria-hidden="true">
+                      <svg
+                        viewBox="0 0 24 24"
+                        width="16"
+                        height="16"
+                        fill="none"
+                      >
+                        <circle
+                          cx="12"
+                          cy="12"
+                          r="10"
+                          stroke="currentColor"
+                          stroke-width="1.5"></circle>
+                        <path
+                          d="M7.5 12.2L10.4 15L16.5 9"
+                          stroke="currentColor"
+                          stroke-width="1.7"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"></path>
+                      </svg>
+                    </span>
+                    <span
+                      >Step-by-step guides, handoff documentation, workflow
+                      instructions, and support notes</span
+                    >
+                  </li>
+                  <li>
+                    <span class="lz-check-icon" aria-hidden="true">
+                      <svg
+                        viewBox="0 0 24 24"
+                        width="16"
+                        height="16"
+                        fill="none"
+                      >
+                        <circle
+                          cx="12"
+                          cy="12"
+                          r="10"
+                          stroke="currentColor"
+                          stroke-width="1.5"></circle>
+                        <path
+                          d="M7.5 12.2L10.4 15L16.5 9"
+                          stroke="currentColor"
+                          stroke-width="1.7"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"></path>
+                      </svg>
+                    </span>
+                    <span
+                      >Translating technical processes into clear language for
+                      owners, staff, volunteers, and stakeholders</span
+                    >
+                  </li>
+                  <li>
+                    <span class="lz-check-icon" aria-hidden="true">
+                      <svg
+                        viewBox="0 0 24 24"
+                        width="16"
+                        height="16"
+                        fill="none"
+                      >
+                        <circle
+                          cx="12"
+                          cy="12"
+                          r="10"
+                          stroke="currentColor"
+                          stroke-width="1.5"></circle>
+                        <path
+                          d="M7.5 12.2L10.4 15L16.5 9"
+                          stroke="currentColor"
+                          stroke-width="1.7"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"></path>
+                      </svg>
+                    </span>
+                    <span
+                      >QA/UAT-style testing, release readiness checks, issue
+                      tracking, and content accuracy reviews</span
+                    >
+                  </li>
+                  <li>
+                    <span class="lz-check-icon" aria-hidden="true">
+                      <svg
+                        viewBox="0 0 24 24"
+                        width="16"
+                        height="16"
+                        fill="none"
+                      >
+                        <circle
+                          cx="12"
+                          cy="12"
+                          r="10"
+                          stroke="currentColor"
+                          stroke-width="1.5"></circle>
+                        <path
+                          d="M7.5 12.2L10.4 15L16.5 9"
+                          stroke="currentColor"
+                          stroke-width="1.7"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"></path>
+                      </svg>
+                    </span>
+                    <span
+                      >Document control habits including naming consistency,
+                      version awareness, and organized project files</span
+                    >
+                  </li>
+                </ul>
+              </div>
+
+              <div class="lz-divider" aria-hidden="true"></div>
+            </div>
+
+            <div class="lz-accordion-item">
+              <button
+                class="lz-accordion-trigger"
+                type="button"
+                aria-expanded="false"
+              >
+                <span class="lz-title"
+                  >4. BUSINESS, DATA & SUPPORT WORKFLOWS</span
+                >
+
+                <span class="lz-chevron" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="none">
+                    <path
+                      d="M6 10L12 16L18 10"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"></path>
+                  </svg>
+                </span>
+              </button>
+
+              <div class="lz-accordion-panel" hidden>
+                <ul class="lz-list">
+                  <li>
+                    <span class="lz-check-icon" aria-hidden="true">
+                      <svg
+                        viewBox="0 0 24 24"
+                        width="16"
+                        height="16"
+                        fill="none"
+                      >
+                        <circle
+                          cx="12"
+                          cy="12"
+                          r="10"
+                          stroke="currentColor"
+                          stroke-width="1.5"></circle>
+                        <path
+                          d="M7.5 12.2L10.4 15L16.5 9"
+                          stroke="currentColor"
+                          stroke-width="1.7"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"></path>
+                      </svg>
+                    </span>
+                    <span
+                      >Requirements gathering, user stories, Agile planning,
+                      project milestones, and stakeholder communication</span
+                    >
+                  </li>
+                  <li>
+                    <span class="lz-check-icon" aria-hidden="true">
+                      <svg
+                        viewBox="0 0 24 24"
+                        width="16"
+                        height="16"
+                        fill="none"
+                      >
+                        <circle
+                          cx="12"
+                          cy="12"
+                          r="10"
+                          stroke="currentColor"
+                          stroke-width="1.5"></circle>
+                        <path
+                          d="M7.5 12.2L10.4 15L16.5 9"
+                          stroke="currentColor"
+                          stroke-width="1.7"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"></path>
+                      </svg>
+                    </span>
+                    <span
+                      >SQL/database organization, data/content accuracy checks,
+                      and structured record management</span
+                    >
+                  </li>
+                  <li>
+                    <span class="lz-check-icon" aria-hidden="true">
+                      <svg
+                        viewBox="0 0 24 24"
+                        width="16"
+                        height="16"
+                        fill="none"
+                      >
+                        <circle
+                          cx="12"
+                          cy="12"
+                          r="10"
+                          stroke="currentColor"
+                          stroke-width="1.5"></circle>
+                        <path
+                          d="M7.5 12.2L10.4 15L16.5 9"
+                          stroke="currentColor"
+                          stroke-width="1.7"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"></path>
+                      </svg>
+                    </span>
+                    <span
+                      >Troubleshooting CMS, hosting, FTP, cPanel, Netlify, Git,
+                      and GitHub workflows</span
+                    >
+                  </li>
+                  <li>
+                    <span class="lz-check-icon" aria-hidden="true">
+                      <svg
+                        viewBox="0 0 24 24"
+                        width="16"
+                        height="16"
+                        fill="none"
+                      >
+                        <circle
+                          cx="12"
+                          cy="12"
+                          r="10"
+                          stroke="currentColor"
+                          stroke-width="1.5"></circle>
+                        <path
+                          d="M7.5 12.2L10.4 15L16.5 9"
+                          stroke="currentColor"
+                          stroke-width="1.7"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"></path>
+                      </svg>
+                    </span>
+                    <span
+                      >Practical support for technical and non-technical teams
+                      across updates, fixes, and improvements</span
+                    >
+                  </li>
+                </ul>
+              </div>
+
+              <div class="lz-divider" aria-hidden="true"></div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          id="lz-services-card-slot"
+          class="lz-shared-card-slot lz-shared-card-slot-services"
+          aria-hidden="true"
+        >
+        </div>
+
+        <div class="lz-mobile-visual" aria-hidden="true">
+          <div class="lz-mobile-card">
+            <img
+              src="https://framerusercontent.com/images/qbjsnnvP9w7UaA2syp36oUe8OSo.jpg"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─────────────────────────────────────
+         LZ About
+         ───────────────────────────────────── -->
+
+    <section id="lz-home-about">
+      <div class="lz-container">
+        <div class="lz-section-content">
+          <div class="lz-section-copy">
+            <h2 class="lz-title">ABOUT ME</h2>
+
+            <p class="lz-description">
+              Hi I'm Laurenz, an emerging full-stack developer with experience
+              building responsive websites, configuring editable content
+              systems, supporting non-technical users, and documenting
+              workflows. I’m interested in roles across web development,
+              technical writing, and business & IT systems support where
+              accuracy, usability, and clear communication matter.
+            </p>
+          </div>
+
+          <div class="lz-stats" aria-label="Key stats">
+            <div class="lz-stat">
+              <div class="lz-stat-number">3</div>
+              <div class="lz-stat-label">Years of Experience</div>
+            </div>
+
+            <div class="lz-stat">
+              <div class="lz-stat-number">23</div>
+              <div class="lz-stat-label">Completed Projects</div>
+            </div>
+
+            <div class="lz-stat">
+              <div class="lz-stat-number">500+</div>
+              <div class="lz-stat-label">Coding Hours Completed</div>
+            </div>
+          </div>
+
+          <div class="lz-contact-details">
+            <div class="lz-contact-item">
+              <span class="lz-contact-label">Call Today :</span>
+              <a class="lz-contact-link" href="tel:+17806687739">
+                780-668-7739
+              </a>
+            </div>
+
+            <div class="lz-contact-item">
+              <span class="lz-contact-label">Email :</span>
+              <a
+                class="lz-contact-link"
+                href="mailto:laurenzsinchongco@gmail.com"
+              >
+                laurenzsinchongco@gmail.com
+              </a>
+            </div>
+          </div>
+
+          <!-- <div class="lz-social-links" aria-label="Social links">
+            <a href="#" aria-label="X">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M18.244 2H21l-6.56 7.497L22.16 22h-6.05l-4.736-6.19L5.95 22H3.19l7.015-8.018L1.84 2h6.204l4.28 5.647L18.244 2Zm-2.12 18h1.676L7.13 3.895H5.332L16.124 20Z"
+                ></path>
+              </svg>
+            </a>
+
+            <a href="#" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2Zm0 1.8A3.95 3.95 0 0 0 3.8 7.75v8.5a3.95 3.95 0 0 0 3.95 3.95h8.5a3.95 3.95 0 0 0 3.95-3.95v-8.5a3.95 3.95 0 0 0-3.95-3.95h-8.5Zm8.95 1.35a1.15 1.15 0 1 1 0 2.3 1.15 1.15 0 0 1 0-2.3ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 1.8A3.2 3.2 0 1 0 12 15.2 3.2 3.2 0 0 0 12 8.8Z"
+                ></path>
+              </svg>
+            </a>
+
+            <a href="#" aria-label="Behance">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M4 6.5A1.5 1.5 0 0 1 5.5 5h5.3c2.45 0 4.05 1.18 4.05 3.32 0 1.22-.55 2.08-1.55 2.58 1.37.42 2.12 1.53 2.12 3.07 0 2.47-1.92 4.03-4.86 4.03H5.5A1.5 1.5 0 0 1 4 16.5v-10Zm3 2v2.2h3.35c.97 0 1.55-.4 1.55-1.13 0-.74-.58-1.07-1.55-1.07H7Zm0 4.6v2.4h3.83c1.08 0 1.72-.43 1.72-1.2 0-.82-.64-1.2-1.72-1.2H7Zm9.7-5.84h5.8v1.55h-5.8V7.26Zm2.95 2.18c2.87 0 4.35 1.88 4.35 4.68 0 .26-.02.53-.06.84h-6.64c.17 1.3 1.04 1.96 2.33 1.96.98 0 1.62-.37 2.01-1h2.15c-.57 1.77-2.14 2.82-4.23 2.82-2.88 0-4.75-1.9-4.75-4.7 0-2.75 1.88-4.6 4.84-4.6Zm2.1 3.78c-.12-1.13-.92-1.77-2.08-1.77-1.13 0-1.92.62-2.19 1.77h4.27Z"
+                ></path>
+              </svg>
+            </a>
+
+            <a href="#" aria-label="Dribbble">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2Zm6.9 4.36a8.17 8.17 0 0 1 1.25 5.43 28.6 28.6 0 0 0-6-.12 24.9 24.9 0 0 0-1.28-2.4 15.97 15.97 0 0 0 6.03-2.91Zm-1.47-1.53a14.16 14.16 0 0 1-5.5 2.67A42.6 42.6 0 0 0 9.53 4.3 8.13 8.13 0 0 1 17.43 4.83ZM7.5 4.94a34.5 34.5 0 0 1 2.47 3.28 33.4 33.4 0 0 1-6.08.8A8.16 8.16 0 0 1 7.5 4.94ZM3.82 11.05h.17a35.5 35.5 0 0 0 7.18-1 22.6 22.6 0 0 1 1.08 2.03c-.28.03-.55.07-.83.12-4.1.63-6.28 2.39-7.12 3.21a8.08 8.08 0 0 1-.48-4.36Zm1.64 6.13c.64-.64 2.34-2.02 5.54-2.55.26-.04.52-.08.78-.11a31.9 31.9 0 0 1 1.71 5.19A8.17 8.17 0 0 1 5.46 17.18Zm9.92 2.18a33.9 33.9 0 0 0-1.58-4.84 26.1 26.1 0 0 1 5.95.26 8.17 8.17 0 0 1-4.37 4.58Z"
+                ></path>
+              </svg>
+            </a>
+          </div> -->
+
+          <!-- <div class="lz-button-row">
+            <a class="lz-button" href="./about">MORE ABOUT ME</a>
+          </div> -->
+        </div>
+
+        <div
+          id="lz-about-card-slot"
+          class="lz-shared-card-slot lz-shared-card-slot-about"
+          aria-hidden="true"
+        >
+        </div>
+
+        <div class="lz-mobile-visual" aria-hidden="true">
+          <div class="lz-mobile-card">
+            <img
+              src="https://framerusercontent.com/images/qrxY8NagVO40NBrdhFEGgFR3PYY.jpg?width=620&height=630"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─────────────────────────────────────
+         LZ Projects
+         ───────────────────────────────────── -->
+
+    <section id="lz-home-projects" aria-labelledby="lz-projects-title">
+      <div class="lz-container">
+        <header class="lz-section-header">
+          <h2 id="lz-projects-title" class="lz-title">FEATURED PROJECTS</h2>
+
+          <p class="lz-section-p">
+            These selected projects highlight web development, CMS
+            implementation, API/database workflows, documentation, QA, content
+            accuracy, and user support across real organizations and
+            school-built applications.
+          </p>
+        </header>
+
+        <div id="lz-projects-stack" class="lz-projects-stack">
+          <div
+            id="lz-projects-stage"
+            class="lz-projects-stage"
+            aria-hidden="true"
+          >
+          </div>
+
+          <div id="lz-projects-list" class="lz-list" role="list">
+            <div class="lz-project-card" role="listitem">
+              <a
+                class="lz-project-cover"
+                href="https://patriciastreetdeli.ca"
+                aria-label="Patricia Street Deli Website"
+                target="_blank"
+              >
+                <img
+                  class="lz-project-image"
+                  src="/img/lz-project-psd.jpg"
+                  alt="Featured Project Cover Image"
+                  loading="lazy"
+                  decoding="async"
+                />
+
+                <div class="lz-project-overlay" aria-hidden="true"></div>
+
+                <div class="lz-project-info" aria-hidden="true">
+                  <div class="lz-badge">WordPress / PHP / SCSS</div>
+                  <h3 class="lz-name">PATRICIA STREET DELI WEBSITE</h3>
+                  <p class="lz-description lz-description-overlay">
+                    Built the restaurant’s website using WordPress, HTML/SCSS,
+                    and PHP, then supported hosting setup, FTP/cPanel workflows,
+                    content migration, documentation, handoff, and post-launch
+                    updates.
+                  </p>
+                </div>
+              </a>
+
+              <p class="lz-description lz-description-below">
+                Built the restaurant’s website using WordPress, HTML/SCSS, and
+                PHP, then supported hosting setup, FTP/cPanel workflows, content
+                migration, documentation, handoff, and post-launch updates.
+              </p>
+            </div>
+
+            <div class="lz-project-card" role="listitem">
+              <a
+                class="lz-project-cover"
+                href="https://ljcedmonton.ca"
+                aria-label="Life’s Journey Church Website"
+                target="_blank"
+              >
+                <img
+                  class="lz-project-image"
+                  src="/img/lz-project-ljc.jpg"
+                  alt="Featured Project Cover Image"
+                  loading="lazy"
+                  decoding="async"
+                />
+
+                <div class="lz-project-overlay" aria-hidden="true"></div>
+
+                <div class="lz-project-info" aria-hidden="true">
+                  <div class="lz-badge">
+                    Astro / SCSS / Decap CMS / TypeScript
+                  </div>
+                  <h3 class="lz-name">LIFE’S JOURNEY CHURCH WEBSITE</h3>
+                  <p class="lz-description lz-description-overlay">
+                    Rebuilt the church website from Google Sites into a custom
+                    Astro site with Decap CMS collections, validation rules,
+                    structured editable content, accessibility checks, and
+                    ongoing monthly updates.
+                  </p>
+                </div>
+              </a>
+
+              <p class="lz-description lz-description-below">
+                Rebuilt the church website from Google Sites into a custom Astro
+                site with Decap CMS collections, validation rules, structured
+                editable content, accessibility checks, and ongoing monthly
+                updates.
+              </p>
+            </div>
+
+            <div class="lz-project-card" role="listitem">
+              <div class="lz-project-cover">
+                <img
+                  class="lz-project-image"
+                  src="/img/lz-project-school-camera.png"
+                  alt="Photography Club Landing Page Cover Image"
+                  loading="lazy"
+                  decoding="async"
+                />
+
+                <div class="lz-project-overlay" aria-hidden="true"></div>
+
+                <div class="lz-project-info" aria-hidden="true">
+                  <div class="lz-badge">
+                    School Project / Tailwind CSS / JavaScript / Vite
+                  </div>
+                  <h3 class="lz-name">PHOTOGRAPHY CLUB LANDING PAGE</h3>
+                  <p class="lz-description lz-description-overlay">
+                    Designed and developed a responsive one-page university
+                    photography club landing site as a school project, moving
+                    from low-fi wireframes into a Tailwind component system with
+                    semantic landmarks, keyboard navigation, accessibility
+                    checks, and deployment.
+                  </p>
+                </div>
+              </div>
+
+              <p class="lz-description lz-description-below">
+                Designed and developed a responsive one-page university
+                photography club landing site as a school project, moving from
+                low-fi wireframes into a Tailwind component system with semantic
+                landmarks, keyboard navigation, accessibility checks, and
+                deployment.
+              </p>
+            </div>
+
+            <div class="lz-project-card" role="listitem">
+              <div class="lz-project-cover">
+                <img
+                  class="lz-project-image"
+                  src="/img/lz-project-school-arcteryx.png"
+                  alt="Arc'teryx Clone WooCommerce Storefront Cover Image"
+                  loading="lazy"
+                  decoding="async"
+                />
+
+                <div class="lz-project-overlay" aria-hidden="true"></div>
+
+                <div class="lz-project-info" aria-hidden="true">
+                  <div class="lz-badge">
+                    School Project / WordPress / WooCommerce / PHP / CSS
+                  </div>
+                  <h3 class="lz-name">ARC'TERYX CLONE</h3>
+                  <p class="lz-description lz-description-overlay">
+                    Built a WooCommerce storefront inspired by Arc'teryx as a
+                    school project to practice theme customization, child theme
+                    template overrides, product variants, attribute swatches,
+                    cart and checkout flows, and reusable product card blocks.
+                  </p>
+                </div>
+              </div>
+
+              <p class="lz-description lz-description-below">
+                Built a WooCommerce storefront inspired by Arc'teryx as a school
+                project to practice theme customization, child theme template
+                overrides, product variants, attribute swatches, cart and
+                checkout flows, and reusable product card blocks.
+              </p>
+            </div>
+
+            <div class="lz-project-card" role="listitem">
+              <div class="lz-project-cover">
+                <img
+                  class="lz-project-image"
+                  src="/img/lz-project-school-crud.png"
+                  alt="Champion Catalogue CRUD App Cover Image"
+                  loading="lazy"
+                  decoding="async"
+                />
+
+                <div class="lz-project-overlay" aria-hidden="true"></div>
+
+                <div class="lz-project-info" aria-hidden="true">
+                  <div class="lz-badge">
+                    School Project / PHP / MySQL / Bootstrap
+                  </div>
+                  <h3 class="lz-name">CHAMPION CATALOGUE</h3>
+                  <p class="lz-description lz-description-overlay">
+                    Developed a PHP and MySQL CRUD catalogue as a school project
+                    with authentication, searchable public browsing, role-based
+                    admin and member access, prepared statements, server-side
+                    validation, and paginated list views.
+                  </p>
+                </div>
+              </div>
+
+              <p class="lz-description lz-description-below">
+                Developed a PHP and MySQL CRUD catalogue as a school project
+                with authentication, searchable public browsing, role-based
+                admin and member access, prepared statements, server-side
+                validation, and paginated list views.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- <div class="lz-button-row">
+          <a
+            class="lz-button"
+            href="./projects"
+            aria-label="Browse All Projects"
+          >
+            <span>BROWSE ALL PROJECTS</span>
+          </a>
+        </div> -->
+      </div>
+    </section>
+
+    <!-- ─────────────────────────────────────
+         LZ FAQ
+         ───────────────────────────────────── -->
+
+    <section id="lz-home-faq" aria-labelledby="lz-faq-title">
+      <div class="lz-container">
+        <header class="lz-section-copy">
+          <h2 id="lz-faq-title" class="lz-title">FREQUENTLY ASKED QUESTIONS</h2>
+
+          <p class="lz-section-p">
+            Here are answers to common questions about my web development, CMS
+            implementation, documentation, API/database, and support experience.
+          </p>
+        </header>
+
+        <div id="lz-faq-accordion" class="lz-accordion">
+          <div class="lz-accordion-item lz-is-open">
+            <button
+              class="lz-accordion-trigger"
+              type="button"
+              aria-expanded="true"
+            >
+              <span class="lz-question">
+                <span class="lz-question-number">1.</span>
+                <span class="lz-question-text"
+                  >WHAT KIND OF WORK DO YOU DO?</span
+                >
+              </span>
+
+              <span class="lz-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none">
+                  <path
+                    d="M6 14L12 8L18 14"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"></path>
+                </svg>
+              </span>
+            </button>
+
+            <div class="lz-accordion-panel">
+              <p>
+                I can help with responsive websites, CMS implementation,
+                WordPress/Decap/Sanity workflows, REST API integration,
+                CRUD/database features, technical documentation, QA checks,
+                troubleshooting, and user support.
+              </p>
+            </div>
+
+            <div class="lz-divider" aria-hidden="true"></div>
+          </div>
+
+          <div class="lz-accordion-item">
+            <button
+              class="lz-accordion-trigger"
+              type="button"
+              aria-expanded="false"
+            >
+              <span class="lz-question">
+                <span class="lz-question-number">2.</span>
+                <span class="lz-question-text"
+                  >HOW DO YOU APPROACH PROJECTS?</span
+                >
+              </span>
+
+              <span class="lz-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none">
+                  <path
+                    d="M6 10L12 16L18 10"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"></path>
+                </svg>
+              </span>
+            </button>
+
+            <div class="lz-accordion-panel" hidden>
+              <p>
+                I start by clarifying goals, users, content, requirements, and
+                update needs. Then I plan the structure, build the solution,
+                configure editable workflows, test functionality, document the
+                process, and support release or handoff.
+              </p>
+            </div>
+
+            <div class="lz-divider" aria-hidden="true"></div>
+          </div>
+
+          <div class="lz-accordion-item">
+            <button
+              class="lz-accordion-trigger"
+              type="button"
+              aria-expanded="false"
+            >
+              <span class="lz-question">
+                <span class="lz-question-number">3.</span>
+                <span class="lz-question-text"
+                  >WHAT TECHNOLOGIES DO YOU WORK WITH?</span
+                >
+              </span>
+
+              <span class="lz-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none">
+                  <path
+                    d="M6 10L12 16L18 10"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"></path>
+                </svg>
+              </span>
+            </button>
+
+            <div class="lz-accordion-panel" hidden>
+              <p>
+                I work with HTML, CSS, JavaScript, TypeScript, PHP, SQL, Python,
+                JSON/YAML, REST API integration, Astro, React, Next.js,
+                WordPress, Decap CMS, Sanity CMS, Git/GitHub, Netlify, cPanel,
+                Node.js, Figma, Google Workspace, and Microsoft Office.
+              </p>
+            </div>
+
+            <div class="lz-divider" aria-hidden="true"></div>
+          </div>
+
+          <div class="lz-accordion-item">
+            <button
+              class="lz-accordion-trigger"
+              type="button"
+              aria-expanded="false"
+            >
+              <span class="lz-question">
+                <span class="lz-question-number">4.</span>
+                <span class="lz-question-text">
+                  CAN YOU SUPPORT NON-TECHNICAL USERS?
+                </span>
+              </span>
+
+              <span class="lz-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none">
+                  <path
+                    d="M6 10L12 16L18 10"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"></path>
+                </svg>
+              </span>
+            </button>
+
+            <div class="lz-accordion-panel" hidden>
+              <p>
+                Yes. I can configure CMS collections, fields, validation rules,
+                content templates, and workflow documentation so owners, staff,
+                or volunteers can safely make updates without editing code.
+              </p>
+            </div>
+
+            <div class="lz-divider" aria-hidden="true"></div>
+          </div>
+
+          <div class="lz-accordion-item">
+            <button
+              class="lz-accordion-trigger"
+              type="button"
+              aria-expanded="false"
+            >
+              <span class="lz-question">
+                <span class="lz-question-number">5.</span>
+                <span class="lz-question-text"
+                  >CAN YOU SUPPORT RELEASES AND UPDATES?</span
+                >
+              </span>
+
+              <span class="lz-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none">
+                  <path
+                    d="M6 10L12 16L18 10"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"></path>
+                </svg>
+              </span>
+            </button>
+
+            <div class="lz-accordion-panel" hidden>
+              <p>
+                Yes. I have experience supporting live sites, handling recurring
+                content updates, checking links/metadata/accessibility,
+                troubleshooting CMS or publishing issues, and documenting
+                workflows for smoother handoff.
+              </p>
+            </div>
+
+            <div class="lz-divider" aria-hidden="true"></div>
+          </div>
+
+          <div class="lz-accordion-item">
+            <button
+              class="lz-accordion-trigger"
+              type="button"
+              aria-expanded="false"
+            >
+              <span class="lz-question">
+                <span class="lz-question-number">6.</span>
+                <span class="lz-question-text">HOW CAN I GET IN TOUCH?</span>
+              </span>
+
+              <span class="lz-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none">
+                  <path
+                    d="M6 10L12 16L18 10"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"></path>
+                </svg>
+              </span>
+            </button>
+
+            <div class="lz-accordion-panel" hidden>
+              <p>
+                Send a message with the role, project, website, or workflow you
+                need help with, plus any existing links, content, or
+                requirements. I’ll follow up with clear next steps.
+              </p>
+            </div>
+
+            <div class="lz-divider" aria-hidden="true"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─────────────────────────────────────
+         LZ Contact
+         ───────────────────────────────────── -->
+
+    <section id="lz-home-contact" aria-labelledby="lz-contact-title">
+      <div class="lz-container">
+        <div class="lz-visual" aria-hidden="true">
+          <div class="lz-portrait">
+            <img
+              src="/img/lz-portrait.jpg"
+              alt=""
+              loading="lazy"
+              decoding="async"
+            />
+
+            <div class="lz-badge" aria-hidden="true">
+              <span class="lz-badge-hi">Hi</span>
+
+              <svg class="lz-badge-hand" viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  fill="currentColor"
+                  d="M12.3 2.2c.7 0 1.2.5 1.2 1.2v7.3h.7V4.7c0-.7.5-1.2 1.2-1.2s1.2.5 1.2 1.2v7.1h.7V6.1c0-.7.5-1.2 1.2-1.2S21 5.4 21 6.1v8.2c0 3.9-2.9 7.5-7.6 7.5-4.8 0-8.4-3.3-8.4-7.7V9.2c0-.7.5-1.2 1.2-1.2s1.2.5 1.2 1.2v4.4h.7V3.8c0-.7.5-1.2 1.2-1.2s1.2.5 1.2 1.2v7h.7V3.4c0-.7.5-1.2 1.2-1.2Z"
+                ></path>
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        <div class="lz-section-content">
+          <header class="lz-section-header">
+            <h2 id="lz-contact-title" class="lz-title">Let's work together</h2>
+
+            <p class="lz-section-p">
+              Let’s build a practical, maintainable website or CMS workflow that
+              helps your organization stay updated and easy to manage.
+            </p>
+          </header>
+
+          <form id="lz-contact-form" class="lz-form" novalidate>
+            <div class="lz-field-row">
+              <label class="lz-field">
+                <span class="lz-label">Name</span>
+                <input
+                  type="text"
+                  name="Name"
+                  placeholder="John Smith"
+                  autocomplete="name"
+                  required
+                />
+              </label>
+
+              <label class="lz-field">
+                <span class="lz-label">Email</span>
+                <input
+                  type="email"
+                  name="Email"
+                  placeholder="johnsmith@gmail.com"
+                  autocomplete="email"
+                  required
+                />
+              </label>
+            </div>
+
+            <label class="lz-field">
+              <span class="lz-label">Service Needed ?</span>
+
+              <div class="lz-select-wrapper">
+                <select name="Service" required>
+                  <option value="" selected>Select…</option>
+                  <option>Hiring / job opportunity</option>
+                  <option>Web design & development</option>
+                  <option>WordPress / CMS setup</option>
+                  <option>Content updates</option>
+                  <option>Troubleshooting / support</option>
+                  <option>Others</option>
+                </select>
+
+                <svg
+                  class="lz-select-chevron"
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M6 10L12 16L18 10"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"></path>
+                </svg>
+              </div>
+            </label>
+
+            <label class="lz-field">
+              <span class="lz-label">What can I help you with?</span>
+              <textarea
+                name="Text Area"
+                placeholder="Hello, I'd like to enquire about..."
+                required></textarea>
+            </label>
+
+            <div class="lz-form-actions">
+              <button class="lz-submit-button" type="submit">
+                <span>Submit</span>
+              </button>
+
+              <p id="lz-form-note" class="lz-form-note" aria-live="polite"></p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="lz-footer">
+    <div class="lz-footer-inner">
+      <!-- Logo Group -->
+      <div class="lz-logo-group">
+        <a href="/" class="lz-logo" aria-label="Back to home">
+          <img
+            src="/img/lz-logo-combined.svg"
+            alt="Logo"
+            aria-hidden="true"
+            decoding="async"
+          />
+        </a>
+      </div>
+
+      <!-- Links -->
+      <ul class="lz-nav">
+        <li class="lz-nav-li">
+          <span class="lz-header">Quicklinks</span>
+        </li>
+        <li class="lz-nav-li">
+          <a class="lz-nav-link" href="/">Home</a>
+        </li>
+        <li class="lz-nav-li">
+          <a class="lz-nav-link" href="#lz-home-about">About</a>
+        </li>
+        <li class="lz-nav-li">
+          <a class="lz-nav-link" href="#lz-home-projects">Projects</a>
+        </li>
+        <li class="lz-nav-li">
+          <a class="lz-nav-link" href="#lz-home-contact">Contact</a>
+        </li>
+      </ul>
+
+      <!-- Contact Info -->
+      <ul class="lz-contact">
+        <li class="lz-contact-li">
+          <span class="lz-header">Contact</span>
+        </li>
+        <li class="lz-contact-li">
+          <a class="lz-contact-link" href="tel:780-668-7739">780-668-7739</a>
+        </li>
+        <li class="lz-contact-li">
+          <a class="lz-contact-link" href="mailto:laurenzsinchongco@gmail.com"
+            >laurenzsinchongco<wbr />@gmail.com</a
+          >
+        </li>
+        <li class="lz-contact-li">Edmonton, Alberta</li>
+      </ul>
+
+      <!-- Copyright -->
+      <div class="lz-copyright">
+        <p>© Copyright 2026 Laurenz Sinchongco</p>
+      </div>
+    </div>
+  </footer>
+</Base>

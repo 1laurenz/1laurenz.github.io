@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="logo-dk" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 216 216">
+  <!-- Generator: Adobe Illustrator 30.2.1, SVG Export Plug-In . SVG Version: 2.1.1 Build 1)  -->
+  <defs>
+    <style>
+      .st0 {
+        fill: #231f20;
+      }
+    </style>
+  </defs>
+  <polyline class="st0" points="0 108 20.25 128.25 108 40.5 195.75 128.25 216 108 108 0 40.5 67.5"/>
+  <path class="st0" d="M26.98,134.98s13.42,14.15,13.42,13.61,54.12-54.06,54.12-54.06v107.94l13.47,13.33,81-80.8-13.5-13.5-54,54v-108l-13.5-13.5L26.98,134.98Z"/>
+</svg>

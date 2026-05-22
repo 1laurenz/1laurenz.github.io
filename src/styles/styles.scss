@@ -1,0 +1,312 @@
+/* ─────────────────────────────────────
+   LZ Root
+   ───────────────────────────────────── */
+
+:root {
+  /* Colors */
+  --lz-color-accent: #0071e3;
+  --lz-color-primary: var(--lz-color-accent);
+  --lz-color-primary-light: #669bcf25;
+  --lz-color-secondary: #4894e0;
+  --lz-color-text: #303030;
+  --lz-color-body: var(--lz-color-text);
+  --lz-color-body-inverse: #ffffff;
+  --lz-color-heading: var(--lz-color-text);
+  --lz-color-muted: #5a5a5a;
+  --lz-color-line: #d6d6d6;
+  --lz-color-border: var(--lz-color-line);
+  --lz-color-background: #f3f3f3;
+  --lz-color-soft: #ebebeb;
+  --lz-color-card: #ffffff;
+  --lz-color-success: #27d974;
+  --lz-color-focus: var(--lz-color-accent);
+
+  /* Layout */
+  --lz-layout-max-width: 1200px;
+  --lz-section-padding: clamp(4rem, 12vw, 9rem) 2rem;
+
+  /* Radius */
+  --lz-radius-shell: 28px;
+  --lz-radius-card: 22px;
+  --lz-radius-pill: 999px;
+
+  /* Effects */
+  --lz-shadow-soft: 0 8px 24px rgba(0, 0, 0, 0.05);
+
+  /* Typography */
+  --lz-font-family-primary: "Inter", sans-serif;
+  --lz-font-family-secondary: "Domine", serif;
+  --lz-font-size-body: 1rem;
+  --lz-font-size-topper: 0.875rem;
+  --lz-font-size-heading: clamp(2rem, 5vw, 3.75rem);
+}
+
+/* ─────────────────────────────────────
+   LZ Reset
+   ───────────────────────────────────── */
+
+*,
+*::before,
+*::after {
+  /* Box model */
+  box-sizing: border-box;
+}
+
+html,
+body {
+  /* Box model */
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+body {
+  /* Visuals */
+  background: var(--lz-color-background);
+  color: var(--lz-color-text);
+
+  /* Typography */
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto,
+    Arial, sans-serif;
+
+  overflow-x: hidden;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+body,
+input,
+textarea,
+button {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+figure {
+  margin: 0;
+}
+
+ul,
+ol {
+  padding: 0;
+  list-style: none;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  /* Layout */
+  display: block;
+
+  /* Box model */
+  max-width: 100%;
+}
+
+img {
+  /* Box model */
+  height: auto;
+}
+
+/* Links */
+a {
+  /* Typography */
+  text-decoration: none;
+
+  /* Visuals */
+  color: inherit;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+}
+
+:focus {
+  outline: none;
+}
+
+:focus-visible {
+  outline: 2px solid var(--lz-color-focus);
+  outline-offset: 2px;
+  border-radius: 0.25rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+::selection {
+  background: var(--lz-color-primary-light);
+  color: var(--lz-color-heading);
+}
+
+.lz-container {
+  position: relative;
+  width: 100%;
+  max-width: 80rem;
+  margin-inline: auto;
+}
+
+/* ─────────────────────────────────────
+   LZ Typography
+   ───────────────────────────────────── */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 800;
+  line-height: 1.2;
+  color: var(--lz-color-heading);
+}
+
+p,
+li,
+a {
+  font-size: var(--lz-font-size-body);
+  line-height: 1.6;
+  color: var(--lz-color-body);
+}
+
+a:hover {
+  color: var(--lz-color-heading);
+}
+
+a:focus-visible {
+  outline-color: var(--lz-color-focus);
+}
+
+.lz-topper {
+  display: inline-block;
+  margin-bottom: 0.25rem;
+
+  font-family: var(--lz-font-family-primary);
+  font-size: var(--lz-font-size-topper);
+  font-weight: 900;
+  line-height: 1.2;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+
+  color: var(--lz-color-primary);
+}
+
+.lz-title {
+  max-width: 50ch;
+
+  font-family: var(--lz-font-family-secondary);
+  font-size: var(--lz-font-size-heading);
+  font-weight: 800;
+  line-height: 1.2;
+
+  color: var(--lz-color-heading);
+}
+
+.lz-text {
+  max-width: 40.625rem;
+
+  font-size: var(--lz-font-size-body);
+  line-height: 1.6;
+
+  color: var(--lz-color-body);
+}
+
+/* ─────────────────────────────────────
+   LZ Buttons
+   ───────────────────────────────────── */
+
+.lz-button-solid {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+
+  min-width: 9.375rem;
+  height: 3rem;
+  padding-inline: 1.5rem;
+  border: 0;
+  border-radius: 0.5rem;
+
+  font-size: 1rem;
+  font-weight: 700;
+  text-align: center;
+
+  color: var(--lz-color-body-inverse);
+  background: var(--lz-color-primary);
+
+  transition: background-color 0.2s ease, transform 0.06s ease, box-shadow 0.2s ease;
+  will-change: transform;
+}
+
+.lz-button-solid:hover {
+  background: var(--lz-color-secondary);
+  color: var(--lz-color-body-inverse);
+}
+
+.lz-button-solid:active {
+  transform: translateY(1px) scale(0.99);
+}
+
+.lz-button-solid:focus-visible {
+  outline-color: var(--lz-color-focus);
+}
+
+/* ─────────────────────────────────────
+   LZ Misc
+   ───────────────────────────────────── */
+
+a:hover,
+button:hover {
+  cursor: pointer;
+}
+
+/* Skip link stays available to a11y tech without layout hit */
+.lz-skip {
+  /* Positioning */
+  position: absolute;
+  inset: 0 auto auto 0;
+
+  /* Visuals */
+  opacity: 0;
+  pointer-events: none;
+}
+
+.lz-skip:focus-visible {
+  /* Positioning */
+  z-index: 99999;
+
+  /* Box model */
+  padding: 0.5rem 0.75rem;
+
+  /* Visuals */
+  opacity: 1;
+  background: var(--lz-color-secondary);
+  color: var(--lz-color-body-inverse);
+  pointer-events: auto;
+
+  /* Motion */
+  transform: translateY(0);
+}

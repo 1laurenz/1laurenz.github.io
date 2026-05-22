@@ -1,0 +1,358 @@
+/* -- ───────────────────────────────
+   -- LZ Root
+   -- ─────────────────────────────── */
+
+:root {
+  /* Colours */
+  --primary: #b89c7d;
+  /* warm beige */
+  --primaryLight: #f5efe7;
+  /* very light beige (backgrounds, hover states) */
+  --secondary: #1a1a1a;
+  /* near-black, strong contrast */
+  --secondaryLight: #eaeaea;
+  /* soft gray for surfaces/cards */
+  --headerColor: #111111;
+  /* pure black headers */
+  --bodyTextColor: #333333;
+  /* dark gray for body text (easier on eyes than pure black) */
+  --bodyTextColorWhite: #fff;
+  /* white for text on dark backgrounds */
+
+  /* Font Families */
+  --font-primary: "Inter", sans-serif;
+  --font-secondary: "Domine", serif;
+  --font-logo: "Montserrat", sans-serif;
+
+  /* Font Sizes */
+  --topperFontSize: clamp(0.75rem, 1.5vw, 1rem);
+  --headerFontSize: clamp(2rem, 4vw, 3rem);
+  --bodyFontSize: 1rem;
+
+  /* Layout */
+  --sectionPadding: clamp(4rem, 8vw, 7rem) 1rem;
+}
+
+/* -- ───────────────────────────────
+   -- LZ Reset
+   -- ─────────────────────────────── */
+
+*,
+*::before,
+*::after {
+  /* Box model */
+  box-sizing: border-box;
+}
+
+html,
+body {
+  /* Box model */
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+body {
+  /* Typography */
+  font: 400 1rem/1.5 var(--font-primary);
+
+  /* Visuals */
+  color: var(--bodyTextColor);
+  background: #fff;
+
+  /* Box model */
+  overflow-x: hidden;
+
+  /* Motion */
+  transition:
+    background-color 0.3s,
+    color 0.3s;
+}
+
+/* Improve text rendering */
+body,
+input,
+textarea,
+button {
+  /* Visuals */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Remove default margins */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+figure {
+  /* Box model */
+  margin: 0;
+}
+
+ul,
+ol {
+  /* Box model */
+  padding: 0;
+
+  /* Layout */
+  list-style: none;
+}
+
+/* Media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+  /* Layout */
+  display: block;
+
+  /* Box model */
+  max-width: 100%;
+}
+
+img {
+  /* Box model */
+  height: auto;
+}
+
+/* Forms */
+input,
+button,
+textarea,
+select {
+  /* Typography */
+  font: inherit;
+  color: inherit;
+}
+
+/* Better focus indicators */
+:focus {
+  /* Visuals */
+  outline: none;
+}
+
+:focus-visible {
+  /* Visuals */
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+  border-radius: 0.25rem;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Text selection */
+::selection {
+  /* Visuals */
+  background: var(--primaryLight);
+  color: var(--headerColor);
+}
+
+/* Container */
+.lz-container {
+  /* Positioning */
+  position: relative;
+
+  /* Box model */
+  width: 100%;
+  max-width: 80rem;
+  margin-inline: auto;
+}
+
+/* -- ───────────────────────────────
+   -- LZ Typography
+   -- ─────────────────────────────── */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  /* Typography */
+  font-weight: 800;
+  line-height: 1.2;
+
+  /* Visuals */
+  color: var(--headerColor);
+}
+
+p,
+li,
+a {
+  /* Typography */
+  font-size: var(--bodyFontSize);
+  line-height: 1.6;
+
+  /* Visuals */
+  color: var(--bodyTextColor);
+}
+
+/* Links */
+a {
+  /* Typography */
+  text-decoration: none;
+
+  /* Visuals */
+  color: inherit;
+}
+
+a:hover {
+  /* Visuals */
+  color: var(--headerColor);
+}
+
+a:focus-visible {
+  outline-color: var(--focus);
+}
+
+/* Utility content classes you already use */
+.lz-topper {
+  /* Layout */
+  display: inline-block;
+
+  /* Box model */
+  margin-bottom: 0.25rem;
+
+  /* Typography */
+  font-family: var(--font-primary);
+  font-size: var(--topperFontSize);
+  font-weight: 900;
+  line-height: 1.2;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+
+  /* Visuals */
+  color: var(--primary);
+}
+
+.lz-title {
+  /* Box model */
+  max-width: 20ch;
+
+  /* Typography */
+  font-family: var(--font-secondary);
+  font-size: var(--headerFontSize);
+  font-weight: 800;
+  line-height: 1.2;
+
+  /* Visuals */
+  color: var(--headerColor);
+}
+
+.lz-text {
+  /* Box model */
+  max-width: 40.625rem;
+
+  /* Typography */
+  font-size: var(--bodyFontSize);
+  line-height: 1.6;
+
+  /* Visuals */
+  color: var(--bodyTextColor);
+}
+
+/* -- ───────────────────────────────
+   -- LZ Buttons
+   -- ─────────────────────────────── */
+
+.lz-button-solid {
+  /* Layout */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+
+  /* Box model */
+  min-width: 9.375rem;
+  height: 3rem;
+  padding-inline: 1.5rem;
+  border: 0;
+  border-radius: 0.5rem;
+  /* margin-top: 1rem; */
+
+  /* Typography */
+  font-size: 1rem;
+  font-weight: 700;
+  text-align: center;
+
+  /* Visuals */
+  color: var(--bodyTextColorWhite);
+  background: var(--primary);
+
+  /* Motion */
+  transition:
+    background-color 0.2s ease,
+    transform 0.06s ease,
+    box-shadow 0.2s ease;
+  will-change: transform;
+}
+
+.lz-button-solid:hover {
+  /* Visuals */
+  background: var(--secondary);
+  color: var(--bodyTextColorWhite);
+}
+
+.lz-button-solid:active {
+  /* Motion */
+  transform: translateY(1px) scale(0.99);
+}
+
+.lz-button-solid:focus-visible {
+  outline-color: var(--focus);
+}
+
+/* -- ───────────────────────────────
+   -- LZ Misc
+   -- ─────────────────────────────── */
+
+a:hover,
+button:hover {
+  cursor: pointer;
+}
+
+/* Skip link stays available to a11y tech without layout hit */
+.skip {
+  /* Positioning */
+  position: absolute;
+  inset: 0 auto auto 0;
+
+  /* Visuals */
+  opacity: 0;
+  pointer-events: none;
+}
+
+.skip:focus-visible {
+  /* Positioning */
+  z-index: 99999;
+
+  /* Box model */
+  padding: 0.5rem 0.75rem;
+
+  /* Visuals */
+  opacity: 1;
+  background: var(--secondary);
+  color: var(--bodyTextColorWhite);
+  pointer-events: auto;
+
+  /* Motion */
+  transform: translateY(0);
+}

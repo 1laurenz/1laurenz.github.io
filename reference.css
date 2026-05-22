@@ -1,0 +1,203 @@
+#lz-ministries .lz-container {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(2rem, 4vw, 3rem);
+}
+
+/* -- ───────────────────────────────
+   -- LZ Ministry
+   -- ─────────────────────────────── */
+
+/* 
+   -- Mobile
+*/
+
+#lz-ministry {
+  /* Positioning */
+  position: relative;
+  z-index: 1;
+
+  /* Box model */
+  padding: var(--sectionPadding);
+  overflow: hidden;
+}
+
+#lz-ministry .lz-verse {
+  background-color: var(--primaryLight);
+  border-left: 4px solid var(--primary);
+  padding: 1.25rem;
+  margin: 1.5rem 0 0;
+  font-size: 1.05rem;
+  line-height: 1.5;
+  max-width: 40.625rem;
+}
+
+.lz-bible-reference {
+    display: block;
+}
+
+/* -- ───────────────────────────────
+   -- LZ Children's
+   -- ─────────────────────────────── */
+
+/* 
+   -- Mobile
+*/
+
+#lz-childrens-ljc {
+  /* Positioning */
+  position: relative;
+  z-index: 1;
+
+  /* Box model */
+  padding: var(--sectionPadding);
+  overflow: hidden;
+
+  /* Visuals */
+  background-color: var(--primaryLight);
+}
+
+#lz-childrens-ljc .lz-verse {
+  background-color: #fff;
+  border-left: 4px solid var(--primary);
+  padding: 1.25rem;
+  font-size: 1.05rem;
+  line-height: 1.5;
+  max-width: 40.625rem;
+  margin-bottom: 1.5rem;
+}
+
+#lz-childrens-ljc .lz-bible-reference {
+    display: block;
+}
+
+#lz-childrens-ljc .lz-wrapper {
+    display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+#lz-childrens-ljc .lz-when {
+    margin: 1.5rem 0 2rem;
+}
+
+#lz-childrens-ljc .lz-text>span {
+  font-style: italic;
+}
+
+#lz-childrens-ljc .lz-ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  list-style-type: disc;
+  padding-left: 1rem;
+}
+
+#lz-childrens-ljc .lz-ministry-images {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+#lz-childrens-ljc .lz-ministry-images img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 1rem;
+}
+
+/* 
+   -- Desktop
+*/
+
+@media (min-width: 64rem) {
+  #lz-childrens-ljc > .lz-container > .lz-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+column-gap: 4rem
+  }
+}
+
+/* -- ───────────────────────────────
+   -- LZ Youth
+   -- ─────────────────────────────── */
+
+/* 
+   -- Mobile
+*/
+
+#lz-youth-ljc {
+  /* Positioning */
+  position: relative;
+  z-index: 1;
+
+  /* Box model */
+  padding: var(--sectionPadding);
+  overflow: hidden;
+}
+
+#lz-youth-ljc .lz-verse {
+  background-color: var(--primaryLight);
+  border-left: 4px solid var(--primary);
+  padding: 1.25rem;
+  font-size: 1.05rem;
+  line-height: 1.5;
+  max-width: 40.625rem;
+  margin-bottom: 1.5rem;
+}
+
+.lz-bible-reference {
+    display: block;
+}
+
+#lz-youth-ljc .lz-wrapper {
+    display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+#lz-youth-ljc .lz-when {
+    margin: 1.5rem 0 2rem;
+}
+
+#lz-youth-ljc .lz-text>span {
+  font-style: italic;
+}
+
+#lz-youth-ljc .lz-ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  list-style-type: disc;
+  padding-left: 1rem;
+}
+
+#lz-youth-ljc a span {
+  text-decoration: underline;
+  color: var(--primary);
+}
+
+#lz-youth-ljc .lz-ministry-images {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+#lz-youth-ljc .lz-ministry-images img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 1rem;
+}
+
+/* 
+   -- Desktop
+*/
+
+@media (min-width: 64rem) {
+  #lz-youth-ljc > .lz-container > .lz-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+column-gap: 4rem
+  }
+}
