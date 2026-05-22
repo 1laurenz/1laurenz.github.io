@@ -1,7 +1,19 @@
 {
   "name": "1laurenz-2",
-  "type": "module",
   "version": "0.0.1",
+  "description": "portfolio to astro",
+  "homepage": "https://github.com/1laurenz/1laurenz.github.io#readme",
+  "bugs": {
+    "url": "https://github.com/1laurenz/1laurenz.github.io/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/1laurenz/1laurenz.github.io.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "module",
+  "main": "current.js",
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
